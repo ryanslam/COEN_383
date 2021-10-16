@@ -6,7 +6,7 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 // seller thread to serve one time slice (1 minute)
 void * sell(char *seller_type)
 {
-    while (having more work todo)
+    while (/*having more work todo*/true)
     {
         pthread_mutex_lock(&mutex);
         pthread_cond_wait(&cond, &mutex);
