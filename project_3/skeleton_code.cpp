@@ -6,11 +6,12 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 // seller thread to serve one time slice (1 minute)
 void * sell(char *seller_type)
 {
-    while (having more work todo)
+    while (/*having more work todo*/ false)
     {
         pthread_mutex_lock(&mutex);
         pthread_cond_wait(&cond, &mutex);
         pthread_mutex_unlock(&mutex);
+        //YET TO IMPLEMENT...
         // Serve any buyer available in this seller queue that is ready
         // now to buy ticket till done with all relevant buyers in their queue
     }
