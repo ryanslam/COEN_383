@@ -4,7 +4,9 @@
 #include <string>
 #include <iostream>
 #include <unistd.h>
-
+#include <algorithm>
+#include <queue>
+#include <utility>
 using namespace std;
 
 
@@ -59,12 +61,12 @@ class Seller {
     char sellerType;
     vector< Customer* > customerQueue;
     int sellerId;
-    
-
+    int customersCount;
     Seller( char sType, int sellId, int customers )
     {
         sellerType = sType;
         sellerId = sellId;
+        customersCount = customers;
         for ( int i = 0; i < customers; i ++ )
         {
             customerQueue.push_back( new Customer() );
@@ -87,6 +89,7 @@ pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 pthread_mutex_t concertMutex= PTHREAD_MUTEX_INITIALIZER;
 Concert concert;
 int current_time = -1;
+int total_customers_served = 0;
 
 void printConcert()
 {
@@ -191,22 +194,20 @@ void *sell( Seller *seller )
                 !seller->customerQueue[ i ]->finished )
             {
                 cout << current_time <<  ":\tCustomer has arrived at the end of seller " << seller->sellerId << "'s queue" << endl;
+                Q.push(i);
                 seller->customerQueue[ i ]->inQueue = true;
             }
         }
 
         //algorithm where service customers
-        for ( int i = 0; i < seller->customerQueue.size(); i++ )
+        if(!Q.empty())
         {
-            //if customer not in queue, but is finished, go to next iteration
-            if ( !seller->customerQueue[ i ]->inQueue && seller->customerQueue[ i ]->finished )
+            int i = Q.front();
+            //if service time is 0, we now need to assign them a seat
+            if ( seller->customerQueue[ i ]->serviceTime == 0 )
             {
-                continue;
-            }
-            else if ( seller->customerQueue[ i ]->inQueue )
-            {
-                //if service time is 0, we now need to assign them a seat
-                if ( seller->customerQueue[ i ]->serviceTime == 0 )
+                //a seat was found
+                if ( findAndAllocateSeat( seller->sellerId ) )
                 {
                     //a seat was found
                     if ( findAndAllocateSeat( seller->sellerId ) )
@@ -249,7 +250,16 @@ void *sell( Seller *seller )
                     seller->customerQueue[ i ]->serviceTime--;
                     //pthread_mutex_unlock(&concertMutex);  
                 }
-                break;
+                customers_served++;
+                total_customers_served++;
+            }
+            else
+            {
+                //first time a customer is serviced, we need to set the responseTime
+                if ( seller->customerQueue[ i ]->responseTime == -1 )
+                    seller->customerQueue[ i ]->responseTime = current_time - seller->customerQueue[ i ]->arrivalTime;
+                seller->customerQueue[ i ]->serviceTime--;
+                //pthread_mutex_unlock(&concertMutex);  
             }
         }
         pthread_mutex_unlock(&concertMutex);
@@ -262,9 +272,9 @@ void *sell( Seller *seller )
 }
 void wakeup_all_seller_threads()
 {
-    pthread_mutex_lock(&concertMutex);
+    //pthread_mutex_lock(&concertMutex);
     pthread_cond_broadcast(&cond);
-    pthread_mutex_unlock(&concertMutex);
+    //pthread_mutex_unlock(&concertMutex);
 }
 
 void printMetrics( vector< Seller* > sellers)
@@ -372,11 +382,12 @@ int main( int argc, char* argv[] )
     }
     // wakeup all seller threads
     //concert only goes to time 60, but loop goes longer in case customers are in progress of being serviced
-    for ( current_time = -1; current_time < 120; current_time++ )
+    for ( current_time = -1; total_customers_served != (customers * sellers.size()); current_time++ )
     {
         usleep( 7000 );
         wakeup_all_seller_threads();
     }
+
     //wait for all seller threads to exit
     for (i = 0 ; i < 10 ; i++)
     {
