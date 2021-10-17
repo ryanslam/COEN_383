@@ -293,7 +293,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Average Throughput: " << customers / endTime << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << totalCustomers - customers << endl;
@@ -309,7 +309,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Average Throughput: " << customers / endTime << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 3 << endl;
@@ -325,7 +325,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Average Throughput: " << customers / endTime << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 6 << endl;
