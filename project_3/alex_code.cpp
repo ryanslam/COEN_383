@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+//jbdnsjnknhhh
 class Concert {
     public:
     int seats[ 10 ][ 10 ];
