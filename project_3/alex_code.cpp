@@ -31,17 +31,20 @@ class Customer {
     int serviceTime;
     float turnaroundTime;
     float responseTime;
+    int startTime;
+    int endTime;
     bool inQueue;
     bool finished;
-    bool serving;
 
     Customer()
     {
         arrivalTime = rand() % 60; //arrivalTime between 0 and 59
         inQueue = false;
-        responseTime = 0;
+        responseTime = -1;
+        turnaroundTime = -1;
         finished = false;
-        serving = false;
+        startTime = -1;
+        endTime = -1;
     }
 };
 
@@ -87,6 +90,7 @@ int current_time = -1;
 
 void printConcert()
 {
+    cout << "CONCERT SEATING CHART" << endl;
     for ( int i = 0; i < 10; i++ )
     {
         for ( int j = 0; j < 10; j++ )
@@ -171,8 +175,9 @@ bool findAndAllocateSeat( int id )
 // seller thread to serve one time slice (1 minute)
 void *sell( Seller *seller )
 {    
+    bool servicing = false;
     //check if there are currently customers in the event queue
-    while ( current_time < 60 )
+    while ( current_time < 60 || servicing )
     {
 
         usleep( 3000 );
@@ -183,7 +188,7 @@ void *sell( Seller *seller )
         for ( int i = 0; i < seller->customerQueue.size(); i++ )
         {
             if ( seller->customerQueue[ i ]->arrivalTime <= current_time && !seller->customerQueue[ i ]->inQueue && 
-                !seller->customerQueue[ i ]->finished)
+                !seller->customerQueue[ i ]->finished )
             {
                 cout << current_time <<  ":\tCustomer has arrived at the end of seller " << seller->sellerId << "'s queue" << endl;
                 seller->customerQueue[ i ]->inQueue = true;
@@ -215,13 +220,17 @@ void *sell( Seller *seller )
                         seller->customerQueue[ i ]->finished = true;
                         //remove customer from queue if 
                         seller->customerQueue[ i ]->inQueue = false;
+                        seller->customerQueue[ i ]->endTime = current_time; 
+                        servicing = false;
                         //printConcert();
                         //pthread_mutex_unlock(&concertMutex);
                     }
                     else
                     {
                         usleep( 1000 );
-                        cout << current_time <<  ":\tThe concert is sold out" << seller->sellerId << endl;
+                        //also set end time here so we can keep track of final throughput
+                        seller->customerQueue[ i ]->endTime = current_time; 
+                        cout << current_time <<  ":\tThe concert is sold out" << endl;
                         pthread_mutex_unlock(&concertMutex);
                         //printConcert();
                         return NULL;
@@ -230,9 +239,13 @@ void *sell( Seller *seller )
                 else
                 {
                     //first time a customer is serviced, we need to set the responseTime
-                    if ( seller->customerQueue[ i ]->responseTime == 0 )
+                    if ( seller->customerQueue[ i ]->responseTime == -1 )
+                    {
                         seller->customerQueue[ i ]->responseTime = current_time - 
                             seller->customerQueue[ i ]->arrivalTime;
+                        seller->customerQueue[ i ]->startTime = current_time;
+                        servicing = true;
+                    }
                     seller->customerQueue[ i ]->serviceTime--;
                     //pthread_mutex_unlock(&concertMutex);  
                 }
@@ -258,16 +271,71 @@ void printMetrics( vector< Seller* > sellers)
 {
     float avgTurn = 0;
     float avgResp = 0;
-    float avgThroughput;
+    float avgThroughput = 0;
+    float endTime = 0;
+    float customers = 0;
+    float totalCustomers = 0;
     for( int i = 0; i < sellers.size(); i ++ )
     {
         for ( int j = 0; j < sellers[ i ]->customerQueue.size(); j++ )
         {
             if ( sellers[ i ]->customerQueue[ j ]->finished )
-            { 
-                //
+            {
+                avgTurn += sellers[ i ]->customerQueue[ j ]->turnaroundTime;
+                avgResp += sellers[ i ]->customerQueue[ j ]->responseTime;
+                customers++;
+                endTime = sellers[ i ]->customerQueue[ j ]->endTime;
             }
+            totalCustomers++;
         }
+        if( i == 0)
+        {
+            cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
+            cout << "Average Turnaround Time: " << avgTurn / customers << endl;
+            cout << "Average Response Time: " << avgResp / customers << endl;
+            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Customers Served: " << customers << endl;
+            cout << "Total Customers: " << totalCustomers << endl;
+            cout << "Average Customers Turned Away: " << totalCustomers - customers << endl;
+            cout << endl;
+            avgTurn = 0;
+            avgResp = 0;
+            customers = 0;
+            endTime = 0;
+            totalCustomers = 0;
+        }
+        else if( i == 3)
+        {
+            cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
+            cout << "Average Turnaround Time: " << avgTurn / customers << endl;
+            cout << "Average Response Time: " << avgResp / customers << endl;
+            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Customers Served: " << customers << endl;
+            cout << "Total Customers: " << totalCustomers << endl;
+            cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 3 << endl;
+            cout << endl;
+            avgTurn = 0;
+            avgResp = 0;
+            customers = 0;
+            endTime = 0;
+            totalCustomers = 0;
+        }
+        else if( i == 9 )
+        {
+            cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
+            cout << "Average Turnaround Time: " << avgTurn / customers << endl;
+            cout << "Average Response Time: " << avgResp / customers << endl;
+            cout << "Average Turnaround Time: " << customers / endTime << endl;
+            cout << "Customers Served: " << customers << endl;
+            cout << "Total Customers: " << totalCustomers << endl;
+            cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 6 << endl;
+            cout << endl;
+            avgTurn = 0;
+            avgResp = 0;
+            customers = 0;
+            endTime = 0;
+            totalCustomers = 0;
+        } 
     }
 
 }
@@ -306,7 +374,7 @@ int main( int argc, char* argv[] )
     //concert only goes to time 60, but loop goes longer in case customers are in progress of being serviced
     for ( current_time = -1; current_time < 120; current_time++ )
     {
-        usleep( 1000 );
+        usleep( 7000 );
         wakeup_all_seller_threads();
     }
     //wait for all seller threads to exit
@@ -314,10 +382,10 @@ int main( int argc, char* argv[] )
     {
         pthread_join( tids[i], NULL );
     }
+    cout << endl;
     printConcert();
-    printMetrics( sellers );
-    cout << concert.seatsRemaining << endl;
-    cout << "FIN" << endl;
+    cout << endl;
+    printMetrics( sellers );    
     // Printout simulation results
     return 0;
 }
