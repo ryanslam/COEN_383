@@ -222,7 +222,7 @@ void *sell( Seller *seller )
                         seller->customerQueue[ i ]->inQueue = false;
                         seller->customerQueue[ i ]->endTime = current_time; 
                         servicing = false;
-                        //printConcert();
+                        printConcert();
                         //pthread_mutex_unlock(&concertMutex);
                     }
                     else
