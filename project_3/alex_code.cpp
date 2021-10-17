@@ -44,16 +44,15 @@ class Customer {
 };
 
 //compare function to sorty by arrival time
-bool customerCompare( Customer x, Customer y )
+bool customerCompare( Customer* x, Customer* y )
 {
-    return x.arrivalTime < y.arrivalTime;
+    return x->arrivalTime < y->arrivalTime;
 }
 
 class Seller {
     public:
     char sellerType;
-    vector< Customer > customerQueue;
-    vector< Customer > eventQueue;
+    vector< Customer* > customerQueue;
     int sellerId;
     
 
@@ -63,14 +62,14 @@ class Seller {
         sellerId = sellId;
         for ( int i = 0; i < customers; i ++ )
         {
-            customerQueue.push_back( Customer() );
+            customerQueue.push_back( new Customer() );
             //initialize service time according to the seller type
             if ( sellerId == 0 )
-                customerQueue[ i ].serviceTime = rand() % 2 + 1;
+                customerQueue[ i ]->serviceTime = rand() % 2 + 1;
             else if ( sellerId < 4 )
-                customerQueue[ i ].serviceTime = rand() % 3 + 2;
+                customerQueue[ i ]->serviceTime = rand() % 3 + 2;
             else
-                customerQueue[ i ].serviceTime = rand() % 4 + 4;
+                customerQueue[ i ]->serviceTime = rand() % 4 + 4;
         }
         sort( customerQueue.begin(), customerQueue.end(), customerCompare );
 
@@ -82,7 +81,7 @@ class Seller {
 pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 pthread_mutex_t concertMutex= PTHREAD_MUTEX_INITIALIZER;
 Concert concert;
-int current_time = 0;
+int current_time = -1;
 
 void printConcert()
 {
@@ -168,73 +167,79 @@ bool findAndAllocateSeat( int id )
     return false;
 }
 // seller thread to serve one time slice (1 minute)
-void *sell( Seller seller )
-{
-    //index used to keep track of which Customer is being served
-    int index = 0;
-    //output for when a customer arrives in the queue
-    for ( int i = 0; i < seller.customerQueue.size(); i++ )
-    {
-        if ( seller.customerQueue[ i ].arrivalTime <= current_time && !seller.customerQueue[ i ].inQueue )
-        {
-            cout << current_time <<  ":\tCustomer has arrived at the end of seller " << seller.sellerId << "'s queue" << endl;
-            seller.customerQueue[ i ].inQueue = true;
-        }
-    }
+void *sell( Seller *seller )
+{    
     //check if there are currently customers in the event queue
-
     while ( current_time < 70 )
     {
+        if ( concert.seatsRemaining < 0 )
+        {
+            break;
+        }
+
+        usleep( 3000 );
         pthread_mutex_lock( &concertMutex);
         pthread_cond_wait(&cond, &concertMutex);
-        for ( int i = 0; i < seller.customerQueue.size(); i++ )
+        for ( int i = 0; i < seller->customerQueue.size(); i++ )
         {
-            //queue is empty
-            if ( !seller.customerQueue[ i ].inQueue && !seller.customerQueue[ i ].finished )
+            //output for when a customer arrives in the queue
+            if ( seller->customerQueue[ i ]->arrivalTime <= current_time && !seller->customerQueue[ i ]->inQueue )
             {
-                pthread_mutex_unlock(&concertMutex);
-                return NULL;
+                //cout << current_time <<  ":\tCustomer has arrived at the end of seller " << seller->sellerId << "'s queue" << endl;
+                seller->customerQueue[ i ]->inQueue = true;
             }
-            else
+
+            //if customer not in queue, but is finished, go to next iteration
+            if ( !seller->customerQueue[ i ]->inQueue && seller->customerQueue[ i ]->finished )
+            {
+                continue;
+            }
+            else if ( seller->customerQueue[ i ]->inQueue )
             {
                 //if service time is 0, we now need to assign them a seat
-                if ( !seller.customerQueue[ i ].inQueue )
+                if ( seller->customerQueue[ i ]->serviceTime == 0 )
                 {
                     //a seat was found
-                    if ( findAndAllocateSeat( seller.sellerId ) )
+                    if ( findAndAllocateSeat( seller->sellerId ) )
                     {
-                        cout << current_time <<  ":\tA seat was sold by seller " << seller.sellerId << endl;
+                        //cout << current_time <<  ":\tA seat was sold by seller " << seller->sellerId << endl;
                         //turnaround time for when the customer gets the seat
-                        seller.customerQueue[ i ].turnaroundTime = current_time -
-                            seller.customerQueue[ i ].arrivalTime;
+                        seller->customerQueue[ i ]->turnaroundTime = current_time -
+                            seller->customerQueue[ i ]->arrivalTime;
                         //used for calculating throughput later
-                        seller.customerQueue[ i ].finished = true;
-                        seller.customerQueue[ i ].inQueue = false;
+                        seller->customerQueue[ i ]->finished = true;
+                        seller->customerQueue[ i ]->inQueue = false;
                         //printConcert();
-                        index++;
                     }
                     else
                     {
-                        cout << current_time <<  ":\tThe concert is sold out" << endl;
+                        //cout << current_time <<  ":\tThe concert is sold out" << concert.seatsRemaining <<  endl;
+                        printConcert();
+                        seller->customerQueue[ i ]->finished = false;
+                        seller->customerQueue[ i ]->inQueue = false;
+                        return NULL;
                     }
                     //end thread here since a seat was assigned or concert is sold out
                     pthread_mutex_unlock(&concertMutex);
-                    return NULL;
+                    continue;
                 }
                 //first time a customer is serviced, we need to set the responseTime
-                if ( seller.customerQueue[ i ].responseTime == 0 )
+                if ( seller->customerQueue[ i ]->responseTime == 0 )
                 {
-                    seller.customerQueue[ i ].responseTime = current_time - 
-                        seller.customerQueue[ i ].arrivalTime;
+                    seller->customerQueue[ i ]->responseTime = current_time - 
+                        seller->customerQueue[ i ]->arrivalTime;
                 }
-                seller.customerQueue[ i ].serviceTime--;
+                seller->customerQueue[ i ]->serviceTime--;
                 pthread_mutex_unlock(&concertMutex);
-                return NULL;
+                continue;
             }    
         }
-        // Serve any buyer available in this seller queue that is ready
-        // now to buy ticket till done with all relevant buyers in their queue
+        pthread_mutex_unlock(&concertMutex);
+        cout << current_time << endl; 
     }
+    // Serve any buyer available in this seller queue that is ready
+    // now to buy ticket till done with all relevant buyers in their queue
+
     return NULL; // thread exits
     
 }
@@ -281,7 +286,7 @@ int main( int argc, char* argv[] )
     }
     // wakeup all seller threads
     //concert only goes to time 60, but loop goes longer in case customers are in progress of being serviced
-    for ( current_time = 0; current_time < 70; current_time++ )
+    for ( current_time = -1; current_time < 70; current_time++ )
     {
         usleep( 1000 );
         wakeup_all_seller_threads();
