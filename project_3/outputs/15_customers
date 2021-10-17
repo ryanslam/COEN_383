@@ -1,262 +1,1360 @@
-0:      Customer has arrived at the end of seller 4's queue
-0:      Customer has arrived at the end of seller 0's queue
-0:      Customer has arrived at the end of seller 5's queue
-1:      Customer has arrived at the end of seller 7's queue
-2:      A seat was sold by seller 0
-2:      Customer has arrived at the end of seller 7's queue
-3:      Customer has arrived at the end of seller 5's queue
-3:      Customer has arrived at the end of seller 8's queue
-3:      Customer has arrived at the end of seller 8's queue
-3:      Customer has arrived at the end of seller 0's queue
-4:      Customer has arrived at the end of seller 5's queue
-4:      A seat was sold by seller 5
-5:      A seat was sold by seller 4
-5:      Customer has arrived at the end of seller 3's queue
-5:      Customer has arrived at the end of seller 3's queue
-5:      Customer has arrived at the end of seller 7's queue
-5:      Customer has arrived at the end of seller 2's queue
-5:      A seat was sold by seller 0
-5:      Customer has arrived at the end of seller 1's queue
-6:      A seat was sold by seller 7
-7:      Customer has arrived at the end of seller 4's queue
-7:      Customer has arrived at the end of seller 7's queue
-7:      Customer has arrived at the end of seller 1's queue
-7:      Customer has arrived at the end of seller 0's queue
-7:      Customer has arrived at the end of seller 0's queue
-8:      Customer has arrived at the end of seller 3's queue
-8:      A seat was sold by seller 3
-8:      Customer has arrived at the end of seller 1's queue
-9:      A seat was sold by seller 1
-9:      Customer has arrived at the end of seller 2's queue
-9:      Customer has arrived at the end of seller 2's queue
-9:      A seat was sold by seller 2
-9:      Customer has arrived at the end of seller 8's queue
-9:      A seat was sold by seller 8
-9:      Customer has arrived at the end of seller 9's queue
-9:      Customer has arrived at the end of seller 0's queue
-9:      A seat was sold by seller 0
-11:     Customer has arrived at the end of seller 3's queue
-11:     A seat was sold by seller 3
-11:     Customer has arrived at the end of seller 0's queue
-11:     A seat was sold by seller 5
-12:     Customer has arrived at the end of seller 3's queue
-12:     A seat was sold by seller 4
-12:     Customer has arrived at the end of seller 6's queue
-12:     Customer has arrived at the end of seller 0's queue
-13:     Customer has arrived at the end of seller 7's queue
-13:     A seat was sold by seller 0
-13:     Customer has arrived at the end of seller 1's queue
-14:     A seat was sold by seller 2
-14:     Customer has arrived at the end of seller 7's queue
-14:     A seat was sold by seller 7
-14:     A seat was sold by seller 1
-14:     A seat was sold by seller 9
-15:     Customer has arrived at the end of seller 5's queue
-15:     Customer has arrived at the end of seller 3's queue
-15:     Customer has arrived at the end of seller 2's queue
-15:     Customer has arrived at the end of seller 8's queue
-16:     Customer has arrived at the end of seller 6's queue
-16:     Customer has arrived at the end of seller 9's queue
-16:     Customer has arrived at the end of seller 4's queue
-16:     Customer has arrived at the end of seller 4's queue
-16:     Customer has arrived at the end of seller 3's queue
-16:     A seat was sold by seller 3
-16:     A seat was sold by seller 0
-17:     Customer has arrived at the end of seller 3's queue
-17:     A seat was sold by seller 8
-17:     Customer has arrived at the end of seller 2's queue
-18:     Customer has arrived at the end of seller 5's queue
-18:     A seat was sold by seller 5
-18:     A seat was sold by seller 0
-18:     A seat was sold by seller 2
-19:     Customer has arrived at the end of seller 1's queue
-19:     A seat was sold by seller 1
-20:     Customer has arrived at the end of seller 8's queue
-20:     Customer has arrived at the end of seller 9's queue
-20:     A seat was sold by seller 9
-20:     A seat was sold by seller 0
-20:     A seat was sold by seller 6
-20:     Customer has arrived at the end of seller 4's queue
-20:     A seat was sold by seller 4
-21:     Customer has arrived at the end of seller 3's queue
-21:     A seat was sold by seller 3
-21:     A seat was sold by seller 7
-22:     Customer has arrived at the end of seller 4's queue
-22:     Customer has arrived at the end of seller 4's queue
-22:     Customer has arrived at the end of seller 6's queue
-22:     Customer has arrived at the end of seller 3's queue
-22:     A seat was sold by seller 1
-22:     Customer has arrived at the end of seller 2's queue
-22:     A seat was sold by seller 2
-23:     Customer has arrived at the end of seller 0's queue
-23:     Customer has arrived at the end of seller 2's queue
-24:     Customer has arrived at the end of seller 6's queue
-24:     Customer has arrived at the end of seller 1's queue
-24:     Customer has arrived at the end of seller 0's queue
-24:     Customer has arrived at the end of seller 8's queue
-25:     A seat was sold by seller 8
-25:     A seat was sold by seller 9
-25:     Customer has arrived at the end of seller 5's queue
-25:     A seat was sold by seller 0
-25:     Customer has arrived at the end of seller 6's queue
-26:     Customer has arrived at the end of seller 5's queue
-26:     A seat was sold by seller 5
-26:     A seat was sold by seller 1
-26:     A seat was sold by seller 3
-26:     A seat was sold by seller 6
-27:     A seat was sold by seller 2
-27:     Customer has arrived at the end of seller 7's queue
-28:     Customer has arrived at the end of seller 1's queue
-28:     Customer has arrived at the end of seller 1's queue
-28:     Customer has arrived at the end of seller 0's queue
-28:     A seat was sold by seller 0
-28:     A seat was sold by seller 4
-28:     Customer has arrived at the end of seller 9's queue
-29:     Customer has arrived at the end of seller 6's queue
-29:     A seat was sold by seller 7
-29:     Customer has arrived at the end of seller 3's queue
-29:     Customer has arrived at the end of seller 8's queue
-30:     Customer has arrived at the end of seller 1's queue
-31:     A seat was sold by seller 3
-31:     A seat was sold by seller 2
-31:     Customer has arrived at the end of seller 6's queue
-31:     A seat was sold by seller 0
-31:     A seat was sold by seller 1
-32:     Customer has arrived at the end of seller 6's queue
-32:     Customer has arrived at the end of seller 5's queue
-33:     A seat was sold by seller 5
-33:     Customer has arrived at the end of seller 9's queue
-33:     A seat was sold by seller 9
-33:     Customer has arrived at the end of seller 7's queue
-33:     A seat was sold by seller 8
-33:     Customer has arrived at the end of seller 1's queue
-34:     Customer has arrived at the end of seller 7's queue
-34:     Customer has arrived at the end of seller 8's queue
-34:     A seat was sold by seller 2
-34:     A seat was sold by seller 3
-34:     Customer has arrived at the end of seller 9's queue
-35:     Customer has arrived at the end of seller 7's queue
-35:     Customer has arrived at the end of seller 7's queue
-35:     Customer has arrived at the end of seller 4's queue
-36:     Customer has arrived at the end of seller 7's queue
-36:     A seat was sold by seller 7
-36:     A seat was sold by seller 6
-36:     A seat was sold by seller 1
-36:     A seat was sold by seller 4
-37:     Customer has arrived at the end of seller 3's queue
-37:     Customer has arrived at the end of seller 1's queue
-38:     Customer has arrived at the end of seller 4's queue
-38:     Customer has arrived at the end of seller 6's queue
-38:     Customer has arrived at the end of seller 9's queue
-38:     Customer has arrived at the end of seller 3's queue
-39:     Customer has arrived at the end of seller 6's queue
-39:     Customer has arrived at the end of seller 0's queue
-39:     Customer has arrived at the end of seller 1's queue
-39:     A seat was sold by seller 3
-40:     A seat was sold by seller 5
-40:     Customer has arrived at the end of seller 0's queue
-40:     Customer has arrived at the end of seller 0's queue
-40:     A seat was sold by seller 0
-41:     A seat was sold by seller 9
-41:     Customer has arrived at the end of seller 1's queue
-41:     A seat was sold by seller 1
-41:     A seat was sold by seller 7
-41:     A seat was sold by seller 8
-41:     Customer has arrived at the end of seller 2's queue
-43:     A seat was sold by seller 3
-43:     A seat was sold by seller 0
-43:     Customer has arrived at the end of seller 5's queue
-43:     Customer has arrived at the end of seller 5's queue
-43:     Customer has arrived at the end of seller 6's queue
-44:     A seat was sold by seller 4
-44:     Customer has arrived at the end of seller 9's queue
-44:     Customer has arrived at the end of seller 9's queue
-44:     Customer has arrived at the end of seller 6's queue
-44:     A seat was sold by seller 6
-45:     Customer has arrived at the end of seller 9's queue
-45:     Customer has arrived at the end of seller 6's queue
-45:     A seat was sold by seller 1
-45:     Customer has arrived at the end of seller 2's queue
-45:     Customer has arrived at the end of seller 2's queue
-45:     A seat was sold by seller 2
-46:     A seat was sold by seller 0
-46:     Customer has arrived at the end of seller 5's queue
-46:     Customer has arrived at the end of seller 4's queue
-47:     Customer has arrived at the end of seller 9's queue
-47:     A seat was sold by seller 9
-47:     Customer has arrived at the end of seller 6's queue
-47:     A seat was sold by seller 3
-48:     Customer has arrived at the end of seller 2's queue
-48:     A seat was sold by seller 5
-48:     Customer has arrived at the end of seller 8's queue
-48:     Customer has arrived at the end of seller 9's queue
-48:     Customer has arrived at the end of seller 7's queue
-48:     Customer has arrived at the end of seller 3's queue
-49:     Customer has arrived at the end of seller 5's queue
-49:     A seat was sold by seller 2
-49:     A seat was sold by seller 1
-49:     A seat was sold by seller 7
-49:     A seat was sold by seller 4
-49:     Customer has arrived at the end of seller 8's queue
-49:     A seat was sold by seller 8
-50:     A seat was sold by seller 6
-50:     Customer has arrived at the end of seller 9's queue
-50:     Customer has arrived at the end of seller 1's queue
-50:     Customer has arrived at the end of seller 5's queue
-51:     Customer has arrived at the end of seller 2's queue
-51:     Customer has arrived at the end of seller 4's queue
-51:     Customer has arrived at the end of seller 4's queue
-51:     Customer has arrived at the end of seller 8's queue
-51:     Customer has arrived at the end of seller 8's queue
-52:     Customer has arrived at the end of seller 7's queue
-52:     A seat was sold by seller 3
-53:     Customer has arrived at the end of seller 4's queue
-53:     Customer has arrived at the end of seller 9's queue
-53:     Customer has arrived at the end of seller 0's queue
-53:     Customer has arrived at the end of seller 5's queue
-54:     Customer has arrived at the end of seller 4's queue
-54:     Customer has arrived at the end of seller 1's queue
-54:     A seat was sold by seller 1
-54:     Customer has arrived at the end of seller 3's queue
-54:     A seat was sold by seller 2
-54:     A seat was sold by seller 0
-54:     Customer has arrived at the end of seller 5's queue
-55:     Customer has arrived at the end of seller 7's queue
-55:     A seat was sold by seller 9
-55:     A seat was sold by seller 3
-55:     Customer has arrived at the end of seller 6's queue
-55:     A seat was sold by seller 8
-55:     Customer has arrived at the end of seller 4's queue
-55:     A seat was sold by seller 5
-55:     Customer has arrived at the end of seller 2's queue
-56:     Customer has arrived at the end of seller 8's queue
-56:     A seat was sold by seller 6
-56:     Customer has arrived at the end of seller 0's queue
-57:     Customer has arrived at the end of seller 9's queue
-57:     A seat was sold by seller 7
-57:     Customer has arrived at the end of seller 8's queue
-57:     Customer has arrived at the end of seller 2's queue
-57:     A seat was sold by seller 1
-58:     A seat was sold by seller 4
-58:     A seat was sold by seller 0
-58:     A seat was sold by seller 3
-58:     Customer has arrived at the end of seller 2's queue
-59:     Customer has arrived at the end of seller 8's queue
-59:     A seat was sold by seller 2
-60:     A seat was sold by seller 8
-61:     A seat was sold by seller 9
-62:     A seat was sold by seller 6
-62:     A seat was sold by seller 2
-62:     A seat was sold by seller 1
-63:     The concert is sold out
-63:     The concert is sold out
-64:     The concert is sold out
-65:     The concert is sold out
+0:	Customer has arrived at the end of seller 4's queue
+0:	Customer has arrived at the end of seller 5's queue
+0:	Customer has arrived at the end of seller 0's queue
+1:	Customer has arrived at the end of seller 7's queue
+2:	Customer has arrived at the end of seller 7's queue
+2:	A seat was sold by seller 0
+CONCERT SEATING CHART
+H---------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+3:	Customer has arrived at the end of seller 5's queue
+3:	Customer has arrived at the end of seller 0's queue
+3:	Customer has arrived at the end of seller 8's queue
+3:	Customer has arrived at the end of seller 8's queue
+4:	Customer has arrived at the end of seller 5's queue
+4:	A seat was sold by seller 5
+CONCERT SEATING CHART
+H---------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+L---------
+5:	Customer has arrived at the end of seller 1's queue
+5:	A seat was sold by seller 4
+CONCERT SEATING CHART
+H---------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+LL--------
+5:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+LL--------
+5:	Customer has arrived at the end of seller 2's queue
+5:	Customer has arrived at the end of seller 7's queue
+5:	Customer has arrived at the end of seller 3's queue
+5:	Customer has arrived at the end of seller 3's queue
+6:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+----------
+LLL-------
+7:	Customer has arrived at the end of seller 4's queue
+7:	Customer has arrived at the end of seller 0's queue
+7:	Customer has arrived at the end of seller 0's queue
+7:	Customer has arrived at the end of seller 7's queue
+7:	Customer has arrived at the end of seller 1's queue
+8:	Customer has arrived at the end of seller 1's queue
+8:	Customer has arrived at the end of seller 3's queue
+8:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+M---------
+----------
+----------
+----------
+----------
+LLL-------
+9:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+MM--------
+----------
+----------
+----------
+----------
+LLL-------
+9:	Customer has arrived at the end of seller 9's queue
+9:	Customer has arrived at the end of seller 2's queue
+9:	Customer has arrived at the end of seller 2's queue
+9:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+MMM-------
+----------
+----------
+----------
+----------
+LLL-------
+9:	Customer has arrived at the end of seller 8's queue
+9:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HH--------
+----------
+----------
+----------
+MMM-------
+----------
+----------
+----------
+----------
+LLLL------
+9:	Customer has arrived at the end of seller 0's queue
+9:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHH-------
+----------
+----------
+----------
+MMM-------
+----------
+----------
+----------
+----------
+LLLL------
+11:	Customer has arrived at the end of seller 3's queue
+11:	Customer has arrived at the end of seller 0's queue
+12:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHH-------
+----------
+----------
+----------
+MMM-------
+----------
+----------
+----------
+----------
+LLLLL-----
+12:	Customer has arrived at the end of seller 3's queue
+12:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHH-------
+----------
+----------
+----------
+MMMM------
+----------
+----------
+----------
+----------
+LLLLL-----
+12:	Customer has arrived at the end of seller 6's queue
+12:	Customer has arrived at the end of seller 0's queue
+12:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHH-------
+----------
+----------
+----------
+MMMM------
+----------
+----------
+----------
+----------
+LLLLLL----
+13:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHH------
+----------
+----------
+----------
+MMMM------
+----------
+----------
+----------
+----------
+LLLLLL----
+13:	Customer has arrived at the end of seller 1's queue
+14:	Customer has arrived at the end of seller 7's queue
+14:	Customer has arrived at the end of seller 7's queue
+14:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHH------
+----------
+----------
+----------
+MMMMM-----
+----------
+----------
+----------
+----------
+LLLLLL----
+14:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHH------
+----------
+----------
+----------
+MMMMM-----
+----------
+----------
+----------
+----------
+LLLLLLL---
+15:	Customer has arrived at the end of seller 2's queue
+15:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHH------
+----------
+----------
+----------
+MMMMMM----
+----------
+----------
+----------
+----------
+LLLLLLL---
+15:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHH------
+----------
+----------
+----------
+MMMMMM----
+----------
+----------
+----------
+----------
+LLLLLLLL--
+15:	Customer has arrived at the end of seller 3's queue
+15:	Customer has arrived at the end of seller 4's queue
+15:	Customer has arrived at the end of seller 8's queue
+15:	Customer has arrived at the end of seller 5's queue
+16:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHH-----
+----------
+----------
+----------
+MMMMMM----
+----------
+----------
+----------
+----------
+LLLLLLLL--
+16:	Customer has arrived at the end of seller 3's queue
+16:	Customer has arrived at the end of seller 6's queue
+17:	Customer has arrived at the end of seller 4's queue
+17:	Customer has arrived at the end of seller 9's queue
+17:	Customer has arrived at the end of seller 2's queue
+17:	Customer has arrived at the end of seller 3's queue
+17:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHH-----
+----------
+----------
+----------
+MMMMMMM---
+----------
+----------
+----------
+----------
+LLLLLLLL--
+18:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMM---
+----------
+----------
+----------
+----------
+LLLLLLLL--
+18:	Customer has arrived at the end of seller 5's queue
+18:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMM---
+----------
+----------
+----------
+----------
+LLLLLLLLL-
+18:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMMM--
+----------
+----------
+----------
+----------
+LLLLLLLLL-
+19:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+----------
+LLLLLLLLL-
+19:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+----------
+LLLLLLLLLL
+20:	Customer has arrived at the end of seller 4's queue
+20:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHH----
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+L---------
+LLLLLLLLLL
+20:	Customer has arrived at the end of seller 8's queue
+20:	Customer has arrived at the end of seller 1's queue
+20:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+L---------
+LLLLLLLLLL
+21:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+LL--------
+LLLLLLLLLL
+21:	Customer has arrived at the end of seller 3's queue
+21:	Customer has arrived at the end of seller 9's queue
+21:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMM-
+----------
+----------
+----------
+LLL-------
+LLLLLLLLLL
+22:	Customer has arrived at the end of seller 6's queue
+22:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+----------
+----------
+----------
+LLL-------
+LLLLLLLLLL
+22:	Customer has arrived at the end of seller 3's queue
+22:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+M---------
+----------
+----------
+LLL-------
+LLLLLLLLLL
+22:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+M---------
+----------
+----------
+LLLL------
+LLLLLLLLLL
+22:	Customer has arrived at the end of seller 4's queue
+22:	Customer has arrived at the end of seller 4's queue
+23:	Customer has arrived at the end of seller 2's queue
+23:	Customer has arrived at the end of seller 2's queue
+23:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+MM--------
+----------
+----------
+LLLL------
+LLLLLLLLLL
+23:	Customer has arrived at the end of seller 0's queue
+24:	Customer has arrived at the end of seller 0's queue
+24:	Customer has arrived at the end of seller 8's queue
+24:	Customer has arrived at the end of seller 6's queue
+24:	Customer has arrived at the end of seller 1's queue
+25:	Customer has arrived at the end of seller 5's queue
+25:	Customer has arrived at the end of seller 6's queue
+25:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+MM--------
+----------
+----------
+LLLLL-----
+LLLLLLLLLL
+26:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHH---
+----------
+----------
+----------
+MMMMMMMMMM
+MMM-------
+----------
+----------
+LLLLL-----
+LLLLLLLLLL
+26:	Customer has arrived at the end of seller 5's queue
+26:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMM-------
+----------
+----------
+LLLLL-----
+LLLLLLLLLL
+27:	Customer has arrived at the end of seller 7's queue
+27:	Customer has arrived at the end of seller 0's queue
+27:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMMM------
+----------
+----------
+LLLLL-----
+LLLLLLLLLL
+27:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMMM------
+----------
+----------
+LLLLLL----
+LLLLLLLLLL
+27:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMMM------
+----------
+----------
+LLLLLLL---
+LLLLLLLLLL
+28:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMM-----
+----------
+----------
+LLLLLLL---
+LLLLLLLLLL
+28:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHHHH--
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMM-----
+----------
+----------
+LLLLLLLL--
+LLLLLLLLLL
+28:	Customer has arrived at the end of seller 1's queue
+28:	Customer has arrived at the end of seller 1's queue
+28:	Customer has arrived at the end of seller 9's queue
+28:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMM-----
+----------
+----------
+LLLLLLLL--
+LLLLLLLLLL
+29:	Customer has arrived at the end of seller 3's queue
+29:	Customer has arrived at the end of seller 8's queue
+29:	Customer has arrived at the end of seller 6's queue
+30:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMM-----
+----------
+----------
+LLLLLLLLL-
+LLLLLLLLLL
+30:	Customer has arrived at the end of seller 1's queue
+31:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMM----
+----------
+----------
+LLLLLLLLL-
+LLLLLLLLLL
+31:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMM----
+----------
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+31:	Customer has arrived at the end of seller 6's queue
+32:	Customer has arrived at the end of seller 1's queue
+32:	Customer has arrived at the end of seller 6's queue
+32:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMM---
+----------
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+32:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHH-
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMM--
+----------
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+32:	Customer has arrived at the end of seller 5's queue
+32:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMM--
+----------
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+33:	Customer has arrived at the end of seller 7's queue
+33:	Customer has arrived at the end of seller 9's queue
+33:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMM--
+----------
+L---------
+LLLLLLLLLL
+LLLLLLLLLL
+33:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMM--
+----------
+LL--------
+LLLLLLLLLL
+LLLLLLLLLL
+34:	Customer has arrived at the end of seller 7's queue
+34:	Customer has arrived at the end of seller 8's queue
+34:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMM--
+----------
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+34:	Customer has arrived at the end of seller 9's queue
+35:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMMM-
+----------
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+35:	Customer has arrived at the end of seller 4's queue
+35:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+----------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+35:	Customer has arrived at the end of seller 7's queue
+35:	Customer has arrived at the end of seller 7's queue
+35:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+M---------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+36:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+M---------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLL------
+LLLLLLLLLL
+LLLLLLLLLL
+37:	Customer has arrived at the end of seller 7's queue
+37:	Customer has arrived at the end of seller 1's queue
+37:	Customer has arrived at the end of seller 3's queue
+38:	Customer has arrived at the end of seller 6's queue
+38:	Customer has arrived at the end of seller 9's queue
+38:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+M---------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLL-----
+LLLLLLLLLL
+LLLLLLLLLL
+38:	Customer has arrived at the end of seller 4's queue
+38:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+M---------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLL----
+LLLLLLLLLL
+LLLLLLLLLL
+38:	Customer has arrived at the end of seller 3's queue
+39:	Customer has arrived at the end of seller 6's queue
+39:	Customer has arrived at the end of seller 1's queue
+39:	Customer has arrived at the end of seller 0's queue
+40:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+----------
+----------
+MM--------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLL----
+LLLLLLLLLL
+LLLLLLLLLL
+40:	Customer has arrived at the end of seller 0's queue
+40:	Customer has arrived at the end of seller 0's queue
+40:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MM--------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLL----
+LLLLLLLLLL
+LLLLLLLLLL
+41:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MM--------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLL---
+LLLLLLLLLL
+LLLLLLLLLL
+41:	Customer has arrived at the end of seller 1's queue
+41:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MMM-------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLL---
+LLLLLLLLLL
+LLLLLLLLLL
+41:	Customer has arrived at the end of seller 2's queue
+42:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MMM-------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLLL--
+LLLLLLLLLL
+LLLLLLLLLL
+43:	Customer has arrived at the end of seller 5's queue
+43:	Customer has arrived at the end of seller 5's queue
+43:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MMM-------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLLLL-
+LLLLLLLLLL
+LLLLLLLLLL
+43:	Customer has arrived at the end of seller 6's queue
+43:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHHHHH
+H---------
+----------
+MMM-------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+43:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMM-------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+43:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMMM------
+MMMMMMMMMM
+MMMMMMMMMM
+----------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+43:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMMM------
+MMMMMMMMMM
+MMMMMMMMMM
+L---------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+44:	Customer has arrived at the end of seller 6's queue
+44:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMMMM-----
+MMMMMMMMMM
+MMMMMMMMMM
+L---------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+45:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMMMMM----
+MMMMMMMMMM
+MMMMMMMMMM
+L---------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+45:	Customer has arrived at the end of seller 6's queue
+45:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHHHHH
+HH--------
+----------
+MMMMMM----
+MMMMMMMMMM
+MMMMMMMMMM
+LL--------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+45:	Customer has arrived at the end of seller 9's queue
+45:	Customer has arrived at the end of seller 9's queue
+45:	Customer has arrived at the end of seller 9's queue
+45:	Customer has arrived at the end of seller 2's queue
+45:	Customer has arrived at the end of seller 2's queue
+46:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMM----
+MMMMMMMMMM
+MMMMMMMMMM
+LL--------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+46:	Customer has arrived at the end of seller 5's queue
+46:	Customer has arrived at the end of seller 4's queue
+47:	Customer has arrived at the end of seller 9's queue
+47:	Customer has arrived at the end of seller 6's queue
+48:	Customer has arrived at the end of seller 8's queue
+48:	Customer has arrived at the end of seller 9's queue
+48:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMM----
+MMMMMMMMMM
+MMMMMMMMMM
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+48:	Customer has arrived at the end of seller 3's queue
+48:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMM---
+MMMMMMMMMM
+MMMMMMMMMM
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+48:	Customer has arrived at the end of seller 2's queue
+48:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMM--
+MMMMMMMMMM
+MMMMMMMMMM
+LLL-------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+48:	Customer has arrived at the end of seller 7's queue
+49:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMM--
+MMMMMMMMMM
+MMMMMMMMMM
+LLLL------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+49:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMM-
+MMMMMMMMMM
+MMMMMMMMMM
+LLLL------
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+49:	Customer has arrived at the end of seller 5's queue
+49:	Customer has arrived at the end of seller 8's queue
+50:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMM-
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLL-----
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+50:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMM-
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLL----
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+50:	Customer has arrived at the end of seller 5's queue
+50:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMM-
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLL---
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+51:	Customer has arrived at the end of seller 9's queue
+51:	Customer has arrived at the end of seller 4's queue
+51:	Customer has arrived at the end of seller 4's queue
+51:	Customer has arrived at the end of seller 2's queue
+51:	Customer has arrived at the end of seller 1's queue
+51:	Customer has arrived at the end of seller 8's queue
+51:	Customer has arrived at the end of seller 8's queue
+52:	Customer has arrived at the end of seller 7's queue
+53:	Customer has arrived at the end of seller 9's queue
+53:	Customer has arrived at the end of seller 0's queue
+53:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMM-
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLL--
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+54:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLL--
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+54:	Customer has arrived at the end of seller 5's queue
+54:	Customer has arrived at the end of seller 5's queue
+54:	Customer has arrived at the end of seller 1's queue
+54:	Customer has arrived at the end of seller 3's queue
+54:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHH-------
+----------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLM-
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+54:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+----------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLM-
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+54:	Customer has arrived at the end of seller 4's queue
+54:	Customer has arrived at the end of seller 4's queue
+55:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+----------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+55:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+L---------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+55:	Customer has arrived at the end of seller 2's queue
+55:	Customer has arrived at the end of seller 6's queue
+55:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+LL--------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+56:	Customer has arrived at the end of seller 7's queue
+56:	Customer has arrived at the end of seller 4's queue
+56:	Customer has arrived at the end of seller 0's queue
+56:	Customer has arrived at the end of seller 8's queue
+57:	Customer has arrived at the end of seller 8's queue
+57:	Customer has arrived at the end of seller 9's queue
+57:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+LLL-------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+57:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+LLLM------
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+57:	Customer has arrived at the end of seller 2's queue
+58:	A seat was sold by seller 5
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+LLLML-----
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+58:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHH------
+LLLMLM----
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+58:	A seat was sold by seller 0
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHH-----
+LLLMLM----
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+58:	A seat was sold by seller 4
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHH-----
+LLLMLML---
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+59:	Customer has arrived at the end of seller 8's queue
+59:	Customer has arrived at the end of seller 2's queue
+59:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHH-----
+LLLMLMLM--
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+60:	A seat was sold by seller 8
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHH-----
+LLLMLMLML-
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+61:	A seat was sold by seller 3
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHH-----
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+61:	A seat was sold by seller 7
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHHL----
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+62:	A seat was sold by seller 6
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHHLL---
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+62:	A seat was sold by seller 2
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHHLLM--
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+63:	A seat was sold by seller 9
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHHLLML-
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+63:	A seat was sold by seller 1
+CONCERT SEATING CHART
+HHHHHHHHHH
+HHHHHLLMLM
+LLLMLMLMLM
+MMMMMMMMMM
+MMMMMMMMMM
+MMMMMMMMMM
+LLLLLLLLMM
+LLLLLLLLLL
+LLLLLLLLLL
+LLLLLLLLLL
+65:	The concert is sold out
+65:	The concert is sold out
 
 CONCERT SEATING CHART
 HHHHHHHHHH
-HHHHHLLLMM
-LMLLLLMLMM
+HHHHHLLMLM
+LLLMLMLMLM
 MMMMMMMMMM
 MMMMMMMMMM
 MMMMMMMMMM
@@ -266,25 +1364,26 @@ LLLLLLLLLL
 LLLLLLLLLL
 
 Metrics for seller type H
-Average Turnaround Time: 3.86667
-Average Response Time: 2.13333
-Average Turnaround Time: 0.258621
+Average Turnaround Time: 4
+Average Response Time: 2.4
+Average Throughput: 0.258621
 Customers Served: 15
 Total Customers: 15
 Average Customers Turned Away: 0
 
 Metrics for seller type M
-Average Turnaround Time: 11.9211
-Average Response Time: 8.63158
-Average Turnaround Time: 0.655172
+Average Turnaround Time: 12.4474
+Average Response Time: 9.07895
+Average Throughput: 0.622951
 Customers Served: 38
 Total Customers: 45
 Average Customers Turned Away: 2.33333
 
 Metrics for seller type L
-Average Turnaround Time: 15.7234
-Average Response Time: 9.82979
-Average Turnaround Time: 0.770492
+Average Turnaround Time: 16.6809
+Average Response Time: 10.5532
+Average Throughput: 0.746032
 Customers Served: 47
 Total Customers: 90
 Average Customers Turned Away: 7.16667
+
