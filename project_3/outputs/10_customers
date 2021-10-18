@@ -1,1157 +1,1121 @@
-0:	Customer has arrived at the end of seller 8's queue
-0:	Customer has arrived at the end of seller 6's queue
-1:	Customer has arrived at the end of seller 0's queue
-3:	Customer has arrived at the end of seller 8's queue
-3:	A seat was sold by seller 0
-CONCERT SEATING CHART
-H---------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-3:	Customer has arrived at the end of seller 1's queue
-4:	Customer has arrived at the end of seller 8's queue
-4:	A seat was sold by seller 8
-CONCERT SEATING CHART
-H---------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-L---------
-5:	Customer has arrived at the end of seller 2's queue
-5:	Customer has arrived at the end of seller 3's queue
-5:	Customer has arrived at the end of seller 4's queue
-5:	Customer has arrived at the end of seller 5's queue
-5:	A seat was sold by seller 6
-CONCERT SEATING CHART
-H---------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-----------
-LL--------
-6:	A seat was sold by seller 1
-CONCERT SEATING CHART
-H---------
-----------
-----------
-----------
-M---------
-----------
-----------
-----------
-----------
-LL--------
-7:	Customer has arrived at the end of seller 0's queue
-7:	Customer has arrived at the end of seller 0's queue
-7:	Customer has arrived at the end of seller 2's queue
-7:	Customer has arrived at the end of seller 6's queue
-8:	Customer has arrived at the end of seller 2's queue
-8:	Customer has arrived at the end of seller 5's queue
-9:	A seat was sold by seller 2
-CONCERT SEATING CHART
-H---------
-----------
-----------
-----------
-MM--------
-----------
-----------
-----------
-----------
-LL--------
-9:	Customer has arrived at the end of seller 4's queue
-9:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HH--------
-----------
-----------
-----------
-MM--------
-----------
-----------
-----------
-----------
-LL--------
-9:	Customer has arrived at the end of seller 3's queue
-9:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HH--------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LL--------
-9:	Customer has arrived at the end of seller 1's queue
-10:	Customer has arrived at the end of seller 0's queue
-11:	Customer has arrived at the end of seller 5's queue
-11:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HH--------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LLL-------
-11:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HH--------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LLLL------
-12:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HH--------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LLLLL-----
-12:	Customer has arrived at the end of seller 0's queue
-12:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHH-------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LLLLL-----
-12:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHH-------
-----------
-----------
-----------
-MMM-------
-----------
-----------
-----------
-----------
-LLLLLL----
-12:	Customer has arrived at the end of seller 4's queue
-13:	Customer has arrived at the end of seller 2's queue
-14:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHH-------
-----------
-----------
-----------
-MMMM------
-----------
-----------
-----------
-----------
-LLLLLL----
-14:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHH-------
-----------
-----------
-----------
-MMMMM-----
-----------
-----------
-----------
-----------
-LLLLLL----
-14:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHH------
-----------
-----------
-----------
-MMMMM-----
-----------
-----------
-----------
-----------
-LLLLLL----
-14:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHH------
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLL----
-15:	Customer has arrived at the end of seller 6's queue
-15:	Customer has arrived at the end of seller 7's queue
-15:	Customer has arrived at the end of seller 5's queue
-16:	Customer has arrived at the end of seller 4's queue
-16:	Customer has arrived at the end of seller 4's queue
-16:	Customer has arrived at the end of seller 7's queue
-16:	Customer has arrived at the end of seller 9's queue
-16:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLL----
-17:	Customer has arrived at the end of seller 5's queue
-17:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLLL---
-17:	Customer has arrived at the end of seller 4's queue
-18:	Customer has arrived at the end of seller 8's queue
-18:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLLLL--
-19:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLLLLL-
-19:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMM----
-----------
-----------
-----------
-----------
-LLLLLLLLLL
-19:	Customer has arrived at the end of seller 1's queue
-19:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMM---
-----------
-----------
-----------
-----------
-LLLLLLLLLL
-20:	Customer has arrived at the end of seller 7's queue
-21:	Customer has arrived at the end of seller 5's queue
-21:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMM---
-----------
-----------
-----------
-L---------
-LLLLLLLLLL
-22:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMM---
-----------
-----------
-----------
-LL--------
-LLLLLLLLLL
-22:	Customer has arrived at the end of seller 5's queue
-22:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMM---
-----------
-----------
-----------
-LLL-------
-LLLLLLLLLL
-22:	Customer has arrived at the end of seller 3's queue
-22:	Customer has arrived at the end of seller 9's queue
-22:	Customer has arrived at the end of seller 6's queue
-22:	Customer has arrived at the end of seller 6's queue
-23:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMMM--
-----------
-----------
-----------
-LLL-------
-LLLLLLLLLL
-24:	Customer has arrived at the end of seller 3's queue
-24:	Customer has arrived at the end of seller 2's queue
-24:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMMMM-
-----------
-----------
-----------
-LLL-------
-LLLLLLLLLL
-24:	Customer has arrived at the end of seller 0's queue
-24:	Customer has arrived at the end of seller 0's queue
-25:	Customer has arrived at the end of seller 9's queue
-25:	Customer has arrived at the end of seller 7's queue
-26:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHH-----
-----------
-----------
-----------
-MMMMMMMMM-
-----------
-----------
-----------
-LLLL------
-LLLLLLLLLL
-26:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHHH----
-----------
-----------
-----------
-MMMMMMMMM-
-----------
-----------
-----------
-LLLL------
-LLLLLLLLLL
-26:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHH----
-----------
-----------
-----------
-MMMMMMMMMM
-----------
-----------
-----------
-LLLL------
-LLLLLLLLLL
-26:	Customer has arrived at the end of seller 8's queue
-27:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHH----
-----------
-----------
-----------
-MMMMMMMMMM
-----------
-----------
-----------
-LLLLL-----
-LLLLLLLLLL
-27:	Customer has arrived at the end of seller 0's queue
-28:	Customer has arrived at the end of seller 2's queue
-28:	Customer has arrived at the end of seller 2's queue
-28:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-----------
-----------
-----------
-LLLLL-----
-LLLLLLLLLL
-29:	Customer has arrived at the end of seller 5's queue
-29:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-----------
-----------
-----------
-LLLLLL----
-LLLLLLLLLL
-29:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-----------
-----------
-----------
-LLLLLLL---
-LLLLLLLLLL
-30:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-M---------
-----------
-----------
-LLLLLLL---
-LLLLLLLLLL
-30:	Customer has arrived at the end of seller 2's queue
-30:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-----------
-LLLLLLL---
-LLLLLLLLLL
-31:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHHHH---
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-----------
-LLLLLLLL--
-LLLLLLLLLL
-31:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-----------
-LLLLLLLL--
-LLLLLLLLLL
-31:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-----------
-LLLLLLLLL-
-LLLLLLLLLL
-32:	Customer has arrived at the end of seller 7's queue
-32:	Customer has arrived at the end of seller 1's queue
-33:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-----------
-LLLLLLLLLL
-LLLLLLLLLL
-33:	Customer has arrived at the end of seller 9's queue
-34:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-L---------
-LLLLLLLLLL
-LLLLLLLLLL
-34:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MM--------
-----------
-LL--------
-LLLLLLLLLL
-LLLLLLLLLL
-35:	Customer has arrived at the end of seller 7's queue
-35:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMM-------
-----------
-LL--------
-LLLLLLLLLL
-LLLLLLLLLL
-35:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMM------
-----------
-LL--------
-LLLLLLLLLL
-LLLLLLLLLL
-37:	Customer has arrived at the end of seller 1's queue
-37:	Customer has arrived at the end of seller 5's queue
-37:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMM------
-----------
-LLL-------
-LLLLLLLLLL
-LLLLLLLLLL
-38:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMM------
-----------
-LLLL------
-LLLLLLLLLL
-LLLLLLLLLL
-38:	Customer has arrived at the end of seller 4's queue
-38:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMM------
-----------
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-38:	Customer has arrived at the end of seller 7's queue
-39:	Customer has arrived at the end of seller 1's queue
-39:	Customer has arrived at the end of seller 1's queue
-39:	Customer has arrived at the end of seller 9's queue
-40:	Customer has arrived at the end of seller 1's queue
-40:	Customer has arrived at the end of seller 0's queue
-40:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMM-----
-----------
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-40:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHHHH--
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMM-----
-----------
-LLLLLL----
-LLLLLLLLLL
-LLLLLLLLLL
-41:	Customer has arrived at the end of seller 2's queue
-41:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMM-----
-----------
-LLLLLL----
-LLLLLLLLLL
-LLLLLLLLLL
-41:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMM----
-----------
-LLLLLL----
-LLLLLLLLLL
-LLLLLLLLLL
-41:	Customer has arrived at the end of seller 3's queue
-43:	Customer has arrived at the end of seller 9's queue
-43:	Customer has arrived at the end of seller 8's queue
-43:	Customer has arrived at the end of seller 8's queue
-44:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMM----
-----------
-LLLLLLL---
-LLLLLLLLLL
-LLLLLLLLLL
-44:	Customer has arrived at the end of seller 9's queue
-44:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMM---
-----------
-LLLLLLL---
-LLLLLLLLLL
-LLLLLLLLLL
-44:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMMM--
-----------
-LLLLLLL---
-LLLLLLLLLL
-LLLLLLLLLL
-45:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMMM--
-----------
-LLLLLLLL--
-LLLLLLLLLL
-LLLLLLLLLL
-45:	Customer has arrived at the end of seller 9's queue
-46:	Customer has arrived at the end of seller 8's queue
-46:	Customer has arrived at the end of seller 4's queue
-46:	Customer has arrived at the end of seller 6's queue
-46:	Customer has arrived at the end of seller 3's queue
-46:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMMMM-
-----------
-LLLLLLLL--
-LLLLLLLLLL
-LLLLLLLLLL
-46:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMMMM-
-----------
-LLLLLLLLL-
-LLLLLLLLLL
-LLLLLLLLLL
-47:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-----------
-MMMMMMMMMM
-MMMMMMMMMM
-----------
-LLLLLLLLL-
-LLLLLLLLLL
-LLLLLLLLLL
-47:	Customer has arrived at the end of seller 9's queue
-48:	Customer has arrived at the end of seller 4's queue
-48:	Customer has arrived at the end of seller 3's queue
-49:	Customer has arrived at the end of seller 7's queue
-50:	Customer has arrived at the end of seller 1's queue
-50:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-M---------
-MMMMMMMMMM
-MMMMMMMMMM
-----------
-LLLLLLLLL-
-LLLLLLLLLL
-LLLLLLLLLL
-50:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MM--------
-MMMMMMMMMM
-MMMMMMMMMM
-----------
-LLLLLLLLL-
-LLLLLLLLLL
-LLLLLLLLLL
-50:	Customer has arrived at the end of seller 7's queue
-50:	Customer has arrived at the end of seller 8's queue
-50:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MM--------
-MMMMMMMMMM
-MMMMMMMMMM
-----------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-50:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-----------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-50:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-L---------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-51:	Customer has arrived at the end of seller 6's queue
-51:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-LL--------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-52:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-LLL-------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-52:	Customer has arrived at the end of seller 4's queue
-52:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-LLLL------
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-53:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMM-------
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-53:	Customer has arrived at the end of seller 0's queue
-53:	Customer has arrived at the end of seller 8's queue
-53:	Customer has arrived at the end of seller 6's queue
-53:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHH-
-----------
-----------
-MMMM------
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-54:	Customer has arrived at the end of seller 2's queue
-54:	Customer has arrived at the end of seller 6's queue
-54:	Customer has arrived at the end of seller 5's queue
-54:	A seat was sold by seller 0
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMM------
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-55:	Customer has arrived at the end of seller 7's queue
-55:	Customer has arrived at the end of seller 9's queue
-55:	Customer has arrived at the end of seller 6's queue
-55:	Customer has arrived at the end of seller 3's queue
-55:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMM-----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLL-----
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-56:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMM-----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLL----
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-56:	Customer has arrived at the end of seller 1's queue
-57:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMM-----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLL---
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-57:	A seat was sold by seller 2
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMM----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLL---
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-57:	Customer has arrived at the end of seller 3's queue
-58:	Customer has arrived at the end of seller 3's queue
-58:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMM----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLL--
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-58:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMM----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLL-
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-58:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMM----
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-59:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMMM---
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-59:	A seat was sold by seller 1
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMMMM--
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-61:	A seat was sold by seller 4
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMMMML-
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-61:	A seat was sold by seller 5
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-----------
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-62:	A seat was sold by seller 9
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-L---------
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-62:	A seat was sold by seller 3
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-LM--------
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-64:	A seat was sold by seller 7
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-LML-------
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-66:	A seat was sold by seller 8
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-LMLL------
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-67:	A seat was sold by seller 6
-CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-LMLLL-----
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
+0:	Customer 1 has arrived at the end of seller H0's queue
+0:	Customer 1 has arrived at the end of seller L3's queue
+0:	Customer 1 has arrived at the end of seller L5's queue
+2:	A seat was sold by seller H0 to customer 1
+CONCERT SEATING CHART
+ |H001|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+3:	Customer 2 has arrived at the end of seller L5's queue
+3:	Customer 1 has arrived at the end of seller M1's queue
+4:	Customer 3 has arrived at the end of seller L5's queue
+4:	A seat was sold by seller L5 to customer 1
+CONCERT SEATING CHART
+ |H001|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+5:	Customer 1 has arrived at the end of seller M3's queue
+5:	A seat was sold by seller L3 to customer 1
+CONCERT SEATING CHART
+ |H001|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  || - || || - || || - || || - || || - || || - || || - || || - ||
+5:	Customer 1 has arrived at the end of seller L4's queue
+5:	Customer 1 has arrived at the end of seller M2's queue
+5:	Customer 1 has arrived at the end of seller L2's queue
+6:	A seat was sold by seller M1 to customer 1
+CONCERT SEATING CHART
+ |H001|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  || - || || - || || - || || - || || - || || - || || - || || - ||
+7:	Customer 2 has arrived at the end of seller M2's queue
+7:	Customer 2 has arrived at the end of seller L3's queue
+7:	Customer 2 has arrived at the end of seller H0's queue
+7:	Customer 3 has arrived at the end of seller H0's queue
+8:	Customer 2 has arrived at the end of seller L2's queue
+8:	Customer 3 has arrived at the end of seller M2's queue
+9:	A seat was sold by seller H0 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  || - || || - || || - || || - || || - || || - || || - || || - ||
+9:	Customer 2 has arrived at the end of seller M1's queue
+9:	A seat was sold by seller M2 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  || - || || - || || - || || - || || - || || - || || - || || - ||
+9:	Customer 2 has arrived at the end of seller L4's queue
+9:	Customer 2 has arrived at the end of seller M3's queue
+9:	A seat was sold by seller M3 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  || - || || - || || - || || - || || - || || - || || - || || - ||
+10:	Customer 4 has arrived at the end of seller H0's queue
+11:	A seat was sold by seller L5 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  || - || || - || || - || || - || || - || || - || || - ||
+11:	Customer 3 has arrived at the end of seller L2's queue
+11:	A seat was sold by seller L4 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  || - || || - || || - || || - || || - || || - ||
+12:	A seat was sold by seller H0 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  || - || || - || || - || || - || || - || || - ||
+12:	A seat was sold by seller L3 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  || - || || - || || - || || - || || - ||
+12:	A seat was sold by seller L2 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+12:	Customer 3 has arrived at the end of seller L4's queue
+13:	Customer 5 has arrived at the end of seller H0's queue
+14:	A seat was sold by seller M1 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+14:	Customer 4 has arrived at the end of seller M2's queue
+14:	A seat was sold by seller H0 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+15:	Customer 4 has arrived at the end of seller L2's queue
+15:	Customer 4 has arrived at the end of seller L4's queue
+15:	A seat was sold by seller M2 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+15:	A seat was sold by seller M3 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+15:	Customer 1 has arrived at the end of seller L4's queue
+15:	Customer 3 has arrived at the end of seller L3's queue
+16:	A seat was sold by seller H0 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  || - || || - || || - || || - ||
+16:	Customer 5 has arrived at the end of seller L4's queue
+16:	Customer 1 has arrived at the end of seller L6's queue
+17:	Customer 6 has arrived at the end of seller L4's queue
+17:	Customer 2 has arrived at the end of seller L4's queue
+17:	Customer 5 has arrived at the end of seller L2's queue
+18:	Customer 4 has arrived at the end of seller L5's queue
+18:	A seat was sold by seller L4 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  || - || || - || || - ||
+18:	A seat was sold by seller L2 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  || - || || - ||
+19:	A seat was sold by seller L5 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  || - ||
+19:	A seat was sold by seller M2 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  || - ||
+19:	Customer 3 has arrived at the end of seller M1's queue
+19:	A seat was sold by seller L3 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+21:	Customer 3 has arrived at the end of seller L4's queue
+21:	Customer 6 has arrived at the end of seller L2's queue
+22:	Customer 4 has arrived at the end of seller L3's queue
+22:	Customer 5 has arrived at the end of seller L3's queue
+22:	Customer 2 has arrived at the end of seller L6's queue
+22:	A seat was sold by seller L6 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+22:	A seat was sold by seller M2 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+22:	Customer 7 has arrived at the end of seller L2's queue
+22:	Customer 3 has arrived at the end of seller M3's queue
+23:	A seat was sold by seller M1 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+23:	Customer 4 has arrived at the end of seller M3's queue
+23:	A seat was sold by seller L4 to customer 1
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+24:	Customer 5 has arrived at the end of seller M2's queue
+24:	Customer 6 has arrived at the end of seller H0's queue
+24:	Customer 7 has arrived at the end of seller H0's queue
+24:	A seat was sold by seller L2 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+25:	Customer 4 has arrived at the end of seller L4's queue
+25:	A seat was sold by seller M3 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+26:	Customer 3 has arrived at the end of seller L6's queue
+26:	A seat was sold by seller H0 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  || - || || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+26:	Customer 5 has arrived at the end of seller L5's queue
+26:	A seat was sold by seller L5 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  || - || || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+26:	A seat was sold by seller L4 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  || - || || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+27:	A seat was sold by seller L3 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+27:	Customer 8 has arrived at the end of seller H0's queue
+28:	Customer 6 has arrived at the end of seller M2's queue
+28:	Customer 7 has arrived at the end of seller M2's queue
+28:	A seat was sold by seller M2 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+28:	A seat was sold by seller H0 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+29:	A seat was sold by seller M3 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  || - || || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+29:	Customer 8 has arrived at the end of seller L2's queue
+30:	A seat was sold by seller L4 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  || - || || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+30:	A seat was sold by seller L6 to customer 2
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+30:	Customer 8 has arrived at the end of seller M2's queue
+31:	A seat was sold by seller H0 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  || - || || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+32:	Customer 4 has arrived at the end of seller L6's queue
+32:	A seat was sold by seller L2 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  || - ||
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+32:	A seat was sold by seller L3 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+32:	Customer 5 has arrived at the end of seller L4's queue
+32:	Customer 4 has arrived at the end of seller M1's queue
+33:	A seat was sold by seller L5 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+33:	A seat was sold by seller M2 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+35:	Customer 6 has arrived at the end of seller L4's queue
+35:	A seat was sold by seller L4 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+35:	A seat was sold by seller M1 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+36:	A seat was sold by seller L6 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  || - || || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+37:	Customer 5 has arrived at the end of seller M1's queue
+37:	Customer 9 has arrived at the end of seller L2's queue
+38:	Customer 7 has arrived at the end of seller L4's queue
+38:	Customer 7 has arrived at the end of seller L4's queue
+38:	A seat was sold by seller L4 to customer 3
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+38:	A seat was sold by seller M2 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  || - || || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+39:	Customer 6 has arrived at the end of seller M1's queue
+39:	Customer 7 has arrived at the end of seller M1's queue
+39:	A seat was sold by seller L2 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+40:	Customer 5 has arrived at the end of seller L6's queue
+40:	Customer 8 has arrived at the end of seller M1's queue
+40:	Customer 9 has arrived at the end of seller H0's queue
+41:	A seat was sold by seller M1 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  || - || || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+41:	A seat was sold by seller L4 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+41:	Customer 9 has arrived at the end of seller M2's queue
+41:	A seat was sold by seller H0 to customer 9
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+41:	Customer 5 has arrived at the end of seller M3's queue
+42:	A seat was sold by seller M2 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+43:	Customer 6 has arrived at the end of seller L5's queue
+43:	Customer 7 has arrived at the end of seller L5's queue
+43:	Customer 6 has arrived at the end of seller L6's queue
+44:	A seat was sold by seller M1 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  || - || || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+44:	Customer 7 has arrived at the end of seller L6's queue
+45:	A seat was sold by seller L2 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+45:	Customer 6 has arrived at the end of seller M3's queue
+45:	A seat was sold by seller M3 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  || - || || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+45:	Customer 8 has arrived at the end of seller L6's queue
+45:	A seat was sold by seller L6 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  || - || || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+45:	Customer 8 has arrived at the end of seller L4's queue
+46:	Customer 6 has arrived at the end of seller L3's queue
+47:	A seat was sold by seller L4 to customer 4
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+47:	Customer 9 has arrived at the end of seller L6's queue
+47:	Customer 8 has arrived at the end of seller L5's queue
+48:	Customer 9 has arrived at the end of seller L4's queue
+48:	A seat was sold by seller M2 to customer 9
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+48:	A seat was sold by seller M1 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+48:	Customer 7 has arrived at the end of seller M3's queue
+49:	Customer 8 has arrived at the end of seller L4's queue
+50:	A seat was sold by seller M3 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  || - ||
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+50:	Customer 9 has arrived at the end of seller L5's queue
+50:	A seat was sold by seller L5 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+50:	Customer 9 has arrived at the end of seller L4's queue
+50:	Customer 9 has arrived at the end of seller M1's queue
+50:	A seat was sold by seller L4 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+51:	A seat was sold by seller L6 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+51:	Customer 7 has arrived at the end of seller L3's queue
+52:	A seat was sold by seller L3 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+52:	A seat was sold by seller M1 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  || - || || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+52:	Customer 10 has arrived at the end of seller L4's queue
+54:	Customer 10 has arrived at the end of seller M2's queue
+54:	Customer 10 has arrived at the end of seller L4's queue
+54:	Customer 10 has arrived at the end of seller H0's queue
+54:	Customer 10 has arrived at the end of seller L2's queue
+54:	A seat was sold by seller L2 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+54:	Customer 8 has arrived at the end of seller L3's queue
+54:	Customer 9 has arrived at the end of seller L3's queue
+54:	Customer 10 has arrived at the end of seller L5's queue
+55:	A seat was sold by seller H0 to customer 10
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  || - || || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+55:	A seat was sold by seller L4 to customer 5
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  || - || || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+55:	Customer 8 has arrived at the end of seller M3's queue
+55:	A seat was sold by seller M3 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  || - || || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+55:	Customer 10 has arrived at the end of seller L3's queue
+55:	Customer 10 has arrived at the end of seller L6's queue
+56:	Customer 10 has arrived at the end of seller M1's queue
+57:	A seat was sold by seller M1 to customer 9
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  || - || || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+57:	Customer 9 has arrived at the end of seller M3's queue
+57:	A seat was sold by seller L6 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  || - || || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+58:	A seat was sold by seller L4 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  || - || || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+58:	A seat was sold by seller M2 to customer 10
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  || - || || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+58:	Customer 10 has arrived at the end of seller M3's queue
+59:	A seat was sold by seller L3 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  || - || || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+60:	A seat was sold by seller M3 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  || - || || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+60:	A seat was sold by seller L5 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  || - || || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+61:	A seat was sold by seller M1 to customer 10
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  || - ||
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+62:	A seat was sold by seller L6 to customer 7
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  || - || || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+62:	A seat was sold by seller L4 to customer 6
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  |L406|  || - ||
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+63:	A seat was sold by seller L2 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  |L406|  |L208| 
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+63:	A seat was sold by seller L4 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L108|  || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  |L406|  |L208| 
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
+66:	A seat was sold by seller L3 to customer 8
+CONCERT SEATING CHART
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L108|  |L308|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  |L406|  |L208| 
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
 
 CONCERT SEATING CHART
-HHHHHHHHHH
-----------
-LMLLL-----
-MMMMMMMMLL
-MMMMMMMMMM
-MMMMMMMMMM
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
-LLLLLLLLLL
+ |H001|  |H002|  |H003|  |H004|  |H005|  |H006|  |H007|  |H008|  |H009|  |H010| 
+ || - || || - || || - || || - || || - || || - || || - || || - || || - || || - ||
+ |L108|  |L308|  || - || || - || || - || || - || || - || || - || || - || || - ||
+ |M107|  |M306|  |M108|  |M307|  |M109|  |M210|  |M308|  |M110|  |L406|  |L208| 
+ |M101|  |M201|  |M301|  |M102|  |M202|  |M302|  |M203|  |M204|  |M103|  |M303| 
+ |M205|  |M304|  |M206|  |M104|  |M207|  |M105|  |M208|  |M106|  |M305|  |M209| 
+ |L106|  |L605|  |L306|  |L207|  |L405|  |L606|  |L107|  |L307|  |L507|  |L607| 
+ |L505|  |L104|  |L603|  |L403|  |L205|  |L105|  |L206|  |L604|  |L404|  |L506| 
+ |L601|  |L401|  |L203|  |L504|  |L103|  |L304|  |L402|  |L602|  |L204|  |L305| 
+ |L501|  |L301|  |L502|  |L101|  |L302|  |L201|  |L102|  |L202|  |L503|  |L303| 
 
 Metrics for seller type H
 Average Turnaround Time: 3.1
 Average Response Time: 1.6
-Average Throughput: 0.185185
+Average Throughput: 0.181818
 Customers Served: 10
 Total Customers: 10
 Average Customers Turned Away: 0
 
 Metrics for seller type M
-Average Turnaround Time: 6.13793
-Average Response Time: 2.82759
-Average Throughput: 0.32937
-Customers Served: 29
+Average Turnaround Time: 21.375
+Average Response Time: 8.875
+Average Throughput: 0.156561
+Customers Served: 28
 Total Customers: 30
-Average Customers Turned Away: 0.333333
+Average Customers Turned Away: 7.33333
 
 Metrics for seller type L
-Average Turnaround Time: 14.0217
-Average Response Time: 8.15217
-Average Throughput: 0.428145
-Customers Served: 46
+Average Turnaround Time: 88.5714
+Average Response Time: 50.1429
+Average Throughput: 0.116921
+Customers Served: 44
 Total Customers: 60
-Average Customers Turned Away: 2.33333
+Average Customers Turned Away: 8.83333
 

@@ -12,6 +12,8 @@ class Concert {
     public:
     int seats[ 10 ][ 10 ];
     int seatsRemaining;
+    //used for printing
+    int customerSeats[ 10 ][ 10 ];
 
     Concert()
     {
@@ -20,6 +22,7 @@ class Concert {
             for( int j = 0; j < 10; j++ )
             {
                 seats[ i ][ j ] = -1; 
+                customerSeats[ i ][ j ] = -1;
             }
         }
         seatsRemaining = 100;
@@ -80,7 +83,7 @@ class Seller {
         sort( customerQueue.begin(), customerQueue.end(), customerCompare );
         for ( int i = 0; i < customers; i++ )
         {
-            customerQueue[ i ]->customerId = i;
+            customerQueue[ i ]->customerId = i + 1;
         }
 
     }
@@ -101,13 +104,38 @@ void printConcert()
         for ( int j = 0; j < 10; j++ )
         {
             if ( concert.seats[ i ][ j ] == -1)
-                cout << "-";
+                cout << " || - ||";
             else if ( concert.seats[ i ][ j ] == 0 )
-                cout << "H";
+            {                
+                cout << " |H";
+                cout << concert.seats[ i ][ j ];
+                if ( concert.customerSeats[ i ][ j ] < 10 )
+                {
+                    cout << "0";
+                }
+                cout << concert.customerSeats[ i ][ j ] << "| ";
+                
+            }
             else if ( concert.seats[ i ][ j ] < 4 )
-                cout << "M";
+            {
+                cout << " |M";
+                cout << concert.seats[ i ][ j ];
+                if ( concert.customerSeats[ i ][ j ] < 10 )
+                {
+                    cout << "0";
+                }
+                cout << concert.customerSeats[ i ][ j ] << "| ";
+            }
             else
-                cout << "L";
+            {
+                cout << " |L";
+                cout << concert.seats[ i ][ j ] - 3;
+                if ( concert.customerSeats[ i ][ j ] < 10 )
+                {
+                    cout << "0";
+                }
+                cout << concert.customerSeats[ i ][ j ] << "| ";
+            }
         }
         cout << endl;
     }
@@ -129,7 +157,7 @@ int findSeatInRow ( int row )
 //findAndAllocateSeat should be called when a thread has a mutex
 //if a seat was found, we allocate it and return true
 //takes an ID to determine the row order 
-bool findAndAllocateSeat( int id )
+bool findAndAllocateSeat( int id, int custId )
 {
     if ( id == 0 )
     {
@@ -141,6 +169,7 @@ bool findAndAllocateSeat( int id )
             if( seat != -1 )
             {
                 concert.seats[ row ][ seat ] = id;
+                concert.customerSeats[ row ][ seat ] = custId;
                 concert.seatsRemaining--;
                 return true;
             }
@@ -156,6 +185,7 @@ bool findAndAllocateSeat( int id )
             if( seat != -1 )
             {
                 concert.seats[ row ][ seat ] = id;
+                concert.customerSeats[ row ][ seat ] = custId;
                 concert.seatsRemaining--;
                 return true;
             }
@@ -170,6 +200,7 @@ bool findAndAllocateSeat( int id )
             if( seat != -1 )
             {
                 concert.seats[ row ][ seat ] = id;
+                concert.customerSeats[ row ][ seat ] = custId;
                 concert.seatsRemaining--;
                 return true;
             }
@@ -195,7 +226,12 @@ void *sell( Seller *seller )
             if ( seller->customerQueue[ i ]->arrivalTime <= current_time && !seller->customerQueue[ i ]->inQueue && 
                 !seller->customerQueue[ i ]->finished )
             {
-                cout << current_time <<  ":\tCustomer has arrived at the end of seller " << seller->sellerId << "'s queue" << endl;
+                if ( seller->sellerId > 4 )
+                    cout << current_time <<  ":\tCustomer " << seller->customerQueue[ i ]->customerId << " has arrived at the end of seller " 
+                        << seller->sellerType << seller->sellerId - 3 << "'s queue" << endl;
+                else
+                    cout << current_time <<  ":\tCustomer " << seller->customerQueue[ i ]->customerId << " has arrived at the end of seller " 
+                        << seller->sellerType << seller->sellerId << "'s queue" << endl;
                 seller->customerQueue[ i ]->inQueue = true;
             }
         }
@@ -214,10 +250,14 @@ void *sell( Seller *seller )
                 if ( seller->customerQueue[ i ]->serviceTime == 0 )
                 {
                     //a seat was found
-                    if ( findAndAllocateSeat( seller->sellerId ) )
+                    if ( findAndAllocateSeat( seller->sellerId, seller->customerQueue[ i ]->customerId ) )
                     {
                         usleep( 1000 );
-                        cout << current_time <<  ":\tA seat was sold by seller " << seller->sellerId << endl;
+                        if ( seller->sellerId > 4 )
+                            cout << current_time <<  ":\tA seat was sold by seller " << seller-> sellerType << seller->sellerId - 3;
+                        else
+                            cout << current_time <<  ":\tA seat was sold by seller " << seller->sellerType << seller->sellerId;
+                        cout << " to customer " << seller->customerQueue[ i ]->customerId << endl;
                         //turnaround time for when the customer gets the seat
                         seller->customerQueue[ i ]->turnaroundTime = current_time -
                             seller->customerQueue[ i ]->arrivalTime;
