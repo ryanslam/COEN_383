@@ -276,9 +276,15 @@ void *sell( Seller *seller )
                         //usleep( 1000 );
                         //also set end time here so we can keep track of final throughput
                         if ( seller->sellerId >= 4 )
-							cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ i ]->customerId << " of seller " << seller-> sellerType << seller->sellerId -3 << " was rejected " << endl;
+                            for(int j = i; j < seller->customerQueue.size(); j++)
+                            {
+                                cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ j ]->customerId << " of seller " << seller-> sellerType << seller->sellerId -3 << " was rejected " << endl;
+                            }
                         else
-							cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ i ]->customerId << " of seller " << seller-> sellerType << seller->sellerId << " was rejected " << endl;
+                            for(int j = i; j < seller->customerQueue.size(); j++)
+                            {
+                                cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ j ]->customerId << " of seller " << seller-> sellerType << seller->sellerId << " was rejected " << endl;
+                            }
                         seller->customerQueue[ i ]->endTime = current_time; 
                         cout << current_time <<  ":\tThe concert is sold out" << endl;
                         pthread_mutex_unlock(&concertMutex);
