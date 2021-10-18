@@ -254,7 +254,7 @@ void *sell( Seller *seller )
                     if ( findAndAllocateSeat( seller->sellerId, seller->customerQueue[ i ]->customerId ) )
                     {
                         //usleep( 1000 );
-                        if ( seller->sellerId > 4 )
+                        if ( seller->sellerId >= 4 )
                             cout << current_time <<  ":\tA seat was sold by seller " << seller-> sellerType << seller->sellerId - 3;
                         else
                             cout << current_time <<  ":\tA seat was sold by seller " << seller->sellerType << seller->sellerId;
@@ -275,6 +275,10 @@ void *sell( Seller *seller )
                     {
                         //usleep( 1000 );
                         //also set end time here so we can keep track of final throughput
+                        if ( seller->sellerId >= 4 )
+							cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ i ]->customerId << " of seller " << seller-> sellerType << seller->sellerId -3 << " was rejected " << endl;
+                        else
+							cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ i ]->customerId << " of seller " << seller-> sellerType << seller->sellerId << " was rejected " << endl;
                         seller->customerQueue[ i ]->endTime = current_time; 
                         cout << current_time <<  ":\tThe concert is sold out" << endl;
                         pthread_mutex_unlock(&concertMutex);
