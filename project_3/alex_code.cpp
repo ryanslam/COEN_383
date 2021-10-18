@@ -328,7 +328,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Throughput: " << avgThroughput << endl;
+            cout << "Average Throughput: " << avgThroughput / 6 << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 6 << endl;
