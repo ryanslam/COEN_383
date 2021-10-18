@@ -35,6 +35,7 @@ class Customer {
     int endTime;
     bool inQueue;
     bool finished;
+    int customerId;
 
     Customer()
     {
@@ -77,6 +78,10 @@ class Seller {
                 customerQueue[ i ]->serviceTime = rand() % 4 + 4;
         }
         sort( customerQueue.begin(), customerQueue.end(), customerCompare );
+        for ( int i = 0; i < customers; i++ )
+        {
+            customerQueue[ i ]->customerId = i;
+        }
 
     }
 
@@ -274,9 +279,11 @@ void printMetrics( vector< Seller* > sellers)
     float avgThroughput = 0;
     float endTime = 0;
     float customers = 0;
+    float totalCustomersServed = 0;
     float totalCustomers = 0;
     for( int i = 0; i < sellers.size(); i ++ )
     {
+        customers = 0;
         for ( int j = 0; j < sellers[ i ]->customerQueue.size(); j++ )
         {
             if ( sellers[ i ]->customerQueue[ j ]->finished )
@@ -284,7 +291,10 @@ void printMetrics( vector< Seller* > sellers)
                 avgTurn += sellers[ i ]->customerQueue[ j ]->turnaroundTime;
                 avgResp += sellers[ i ]->customerQueue[ j ]->responseTime;
                 customers++;
+                //endtime set this way since customerQueue is organized by arrivalTime
+                //therefore the last finished customer has the highest endtime
                 endTime = sellers[ i ]->customerQueue[ j ]->endTime;
+                totalCustomersServed++;
             }
             totalCustomers++;
         }
@@ -295,7 +305,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
             cout << "Average Throughput: " << avgThroughput << endl;
-            cout << "Customers Served: " << customers << endl;
+            cout << "Customers Served: " << totalCustomersServed << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << totalCustomers - customers << endl;
             cout << endl;
@@ -305,6 +315,7 @@ void printMetrics( vector< Seller* > sellers)
             endTime = 0;
             totalCustomers = 0;
             avgThroughput = 0;
+            totalCustomersServed = 0;
         }
         else if( i == 3)
         {
@@ -312,7 +323,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
             cout << "Average Throughput: " << avgThroughput / 3 << endl;
-            cout << "Customers Served: " << customers << endl;
+            cout << "Customers Served: " << totalCustomersServed << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 3 << endl;
             cout << endl;
@@ -322,6 +333,7 @@ void printMetrics( vector< Seller* > sellers)
             endTime = 0;
             totalCustomers = 0;
             avgThroughput = 0;
+            totalCustomersServed = 0;
         }
         else if( i == 9 )
         {
@@ -329,7 +341,7 @@ void printMetrics( vector< Seller* > sellers)
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
             cout << "Average Throughput: " << avgThroughput / 6 << endl;
-            cout << "Customers Served: " << customers << endl;
+            cout << "Customers Served: " << totalCustomersServed << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 6 << endl;
             cout << endl;
@@ -338,6 +350,7 @@ void printMetrics( vector< Seller* > sellers)
             customers = 0;
             endTime = 0;
             totalCustomers = 0;
+            totalCustomersServed = 0;
             avgThroughput = 0;
         } 
     }
