@@ -288,12 +288,13 @@ void printMetrics( vector< Seller* > sellers)
             }
             totalCustomers++;
         }
+        avgThroughput += customers / endTime;
         if( i == 0)
         {
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Throughput: " << customers / endTime << endl;
+            cout << "Average Throughput: " << avgThroughput << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << totalCustomers - customers << endl;
@@ -303,13 +304,14 @@ void printMetrics( vector< Seller* > sellers)
             customers = 0;
             endTime = 0;
             totalCustomers = 0;
+            avgThroughput = 0;
         }
         else if( i == 3)
         {
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Throughput: " << customers / endTime << endl;
+            cout << "Average Throughput: " << avgThroughput / 3 << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 3 << endl;
@@ -319,13 +321,14 @@ void printMetrics( vector< Seller* > sellers)
             customers = 0;
             endTime = 0;
             totalCustomers = 0;
+            avgThroughput = 0;
         }
         else if( i == 9 )
         {
             cout << "Metrics for seller type " << sellers[i]->sellerType << endl;
             cout << "Average Turnaround Time: " << avgTurn / customers << endl;
             cout << "Average Response Time: " << avgResp / customers << endl;
-            cout << "Average Throughput: " << customers / endTime << endl;
+            cout << "Average Throughput: " << avgThroughput << endl;
             cout << "Customers Served: " << customers << endl;
             cout << "Total Customers: " << totalCustomers << endl;
             cout << "Average Customers Turned Away: " << ( totalCustomers - customers ) / 6 << endl;
@@ -335,6 +338,7 @@ void printMetrics( vector< Seller* > sellers)
             customers = 0;
             endTime = 0;
             totalCustomers = 0;
+            avgThroughput = 0;
         } 
     }
 
