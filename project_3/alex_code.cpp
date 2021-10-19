@@ -210,8 +210,9 @@ bool findAndAllocateSeat( int id, int custId )
     return false;
 }
 // seller thread to serve one time slice (1 minute)
-void *sell( Seller *seller )
+void *sell( void *arg )
 {    
+    Seller *seller = (Seller *) arg;
     bool servicing = false;
     //check if there are currently customers in the event queue
     while ( current_time < 60 || servicing )
@@ -425,21 +426,20 @@ int main( int argc, char* argv[] )
     vector< Seller* > sellers;
     seller_type = 'H';
     sellers.push_back (  new Seller( seller_type, 0, customers ) );
-    ///not exactly sure why we need (void *(*)(void *)) but compiler complains otherwise
-    pthread_create( &tids[0], NULL, (void *(*)(void *)) sell, sellers[0] );
+    pthread_create( &tids[0], NULL, sell, sellers[0] );
     seller_type = 'M';
     for (i = 1; i < 4; i++)
     {
         usleep( 1000 );
         sellers.push_back( new Seller( seller_type, i, customers ) );
-        pthread_create(&tids[i], NULL, (void *(*)(void *)) sell , sellers[i] );
+        pthread_create(&tids[i], NULL, sell , sellers[i] );
     }
     seller_type = 'L';
     for (i = 4; i < 10; i++)
     {
         usleep( 1000 );
         sellers.push_back( new Seller( seller_type, i, customers ) );
-        pthread_create(&tids[i], NULL, (void *(*)(void *)) sell, sellers[i] );
+        pthread_create(&tids[i], NULL, sell, sellers[i] );
     }
     // wakeup all seller threads
     //concert only goes to time 60, but loop goes longer in case customers are in progress of being serviced
