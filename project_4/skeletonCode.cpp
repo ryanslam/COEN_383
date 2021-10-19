@@ -1,6 +1,10 @@
 #include <iostream>
-
+#include <stdlib.h>
+#include <unistd.h>
 using namespace std;
+
+int mem[ 4 ] = { 5, 11, 17, 31 };
+int service[ 5 ] = { 1, 2, 3, 4, 5 };
 
 struct pageNode {
     //page ID so we can keep track of where pages are going
@@ -13,143 +17,203 @@ struct pageNode {
 struct processNode {
     int memorySize;
     int serviceTime;
-    int processName;
+    int processID;
     int arrivalTime;
+    int startTime;
     processNode* next;
-    pageNode* nextPage;
+    pageNode* pageHead;
+
+    processNode() : memorySize(mem[ (rand() % 4) ]),
+                    serviceTime(service[ (rand() % 5) ]),
+                    arrivalTime((rand() % 60)),
+                    startTime(-1),
+                    next(NULL),
+                    pageHead(NULL){}
 };
 
-class linkedList {
-    public:
-    pageNode* pageHead;
-    pageNode* pageTail;
-    processNode* processHead;
-    processNode* processTail;
-    linkedList()
+//Global Variables
+pageNode* freePageHead;
+int remainingFreePages = 0;
+processNode* processHead;
+int timeStamp = 0;
+pthread_mutex_t timerMutex= PTHREAD_MUTEX_INITIALIZER;
+
+void runTimer(int sec)
+{
+    for(int i=0; i<sec; i++)
     {
-        pageHead = NULL;
-        pageTail = NULL;
-        processHead = NULL;
-        processTail = NULL;
+        usleep(1000000); //sleep for a sec and update timer
+        pthread_mutex_lock(&timerMutex);
+        timeStamp++;
+        pthread_mutex_unlock(&timerMutex);
+    }
+}
+
+int getTimeStamp()
+{
+    int ts;
+    pthread_mutex_lock(&timerMutex);
+    ts = timeStamp;
+    pthread_mutex_unlock(&timerMutex);
+    return ts;
+}
+
+processNode* mergeSort(processNode* head)
+{
+    //base condition
+    if(!head || !(head->next)) return head;
+
+    //find mid of linked list
+    processNode* slowPtr = head;
+    processNode* fastPtr = head;
+    while(fastPtr->next && fastPtr->next->next)
+    {
+        slowPtr = slowPtr->next;
+        fastPtr = fastPtr->next->next;
     }
 
-    void generateJobsAndSort( int jobs )
+    //returns head pointer of sorted linked list
+    processNode* head2 = mergeSort(slowPtr->next);
+    slowPtr->next = NULL;
+    processNode* head1 = mergeSort(head);
+
+    processNode* tempHead = new processNode();
+    head = tempHead;
+    //merging two sorted linked lists
+    while(head1 && head2)
     {
-        int mem[ 4 ] = { 5, 11, 17, 31 };
-        int service[ 5 ] = { 1, 2, 3, 4, 5 };
-        processNode* nextNode;
-        //create unsorted process list 
-        for( int i = 0; i < jobs; i++ )
+        if(head1->arrivalTime <= head2->arrivalTime)
         {
-            nextNode = new processNode;
-            nextNode->memorySize = mem[ i % 4 ];
-            nextNode->serviceTime = service[ i % 5 ];
-            nextNode->arrivalTime = rand() % 60;
-            nextNode->processName = i;
-            nextNode->next = NULL;
-            nextNode->nextPage = NULL;
-            //if current head is not initialized
-            if ( i == 0 )
-            {
-                processHead = nextNode;
-                processTail = processHead;
-            }
-            //iterate through the linked list to become the tail
-            else
-            {
-                
-                processTail->next = nextNode;
-                processTail = processTail->next;
-
-            }
-        }
-        // issue with sorting algorithm somehow
-        // sorting algorithm by arrivalTime
-        // sort will always make sure that the lowest arrival time is at the front
-        processNode* cur1 = processHead;
-        processNode* cur2 = processHead;
-        for( int i = 0; i < jobs; i++ )
-        {
-            for( int j = 0; j < jobs; j++ )
-            {
-                //if a node has a lower arrival time, swap the node values
-                //dont worry about next since we are swapping the values
-                //dont worry about nextPage since we have not started running anything
-                if (cur2 -> next != NULL )
-                    cur2 = cur2->next;
-                if ( cur1->arrivalTime > cur2->arrivalTime )
-                {
-                    int tempMemory = cur1->memorySize;
-                    int tempService = cur1->serviceTime;
-                    int tempArrival = cur1->arrivalTime;
-                    int tempName = cur1->processName;
-                    cur1->memorySize = cur2->memorySize;
-                    cur1->serviceTime = cur2->serviceTime;
-                    cur1->arrivalTime = cur2->arrivalTime;
-                    cur1->processName = cur2->processName;
-                    cur2->memorySize = tempMemory;
-                    cur2->serviceTime = tempService;
-                    cur2->arrivalTime = tempArrival;
-                    cur2->processName = tempName;
-                }
-            }
-            cur1 = cur1->next;
-            cur2 = cur1;
-        }
-    }
-
-    void generateFreePageList( int pages )
-    {
-        pageNode* p;
-        for ( int i = 0; i < pages; i++ )
-        {
-            p = new pageNode;
-            p->pageId = i;
-            if ( i == 0)
-            {
-                pageHead = p;
-                pageTail = p;
-            }
-            else
-            {
-                pageTail->next = p;
-                pageTail = pageTail->next;
-            }
-        }
-    }
-
-
-
-    //used when allocating pages to a process about to be run
-    void allocatePage()
-    {
-        //if there are no pages assigned to this process
-        //first page is always assigned processPageId 0
-        if ( processHead->nextPage == NULL)
-        {
-            processHead->nextPage = pageHead;
-            processHead->nextPage->processPageId = 0;
+            head->next = head1;
+            head1 = head1->next;
         }
         else
         {
-            //UNFINISHED
-            //need to figure out allocating the correct processPageId?
-            //will it always be 0 to memorySize or different numbers for ID
-            cout << "NOT IMPLEMENTED" << endl;
+            head->next = head2;
+            head2 = head2->next;
+        }
+        head = head->next;
+    }
+    if(head1)
+        head->next = head1;
+    else if(head2)
+        head->next = head2;
+    head = tempHead->next;
+    free(tempHead);
+    return tempHead->next;
+}
+
+processNode* generateJobsAndSort( int jobs )
+{
+    processNode* newProcessNode;
+    processNode* head = NULL;
+    //create unsorted process list 
+    for( int i = 0; i < jobs; i++ )
+    {
+        newProcessNode = new processNode();
+        newProcessNode->processID = i;
+        if(!head) head = newProcessNode;
+        else{
+            newProcessNode->next = head;
+            head = newProcessNode;
         }
     }
-};
+    return mergeSort(head);
+}
 
+pageNode* generateFreePageList( int pages )
+{
+    pageNode* newPageNode;
+    pageNode* head = NULL;
+    for ( int i = 0; i < pages; i++ )
+    {
+        newPageNode = new pageNode();
+        newPageNode->pageId = i;
+        if(!head) head = newPageNode;
+        else{
+            newPageNode->next = head;
+            head = newPageNode;
+        }
+    }
+    remainingFreePages = pages;
+    return head;
+}
 
+//used when allocating pages to a process about to be run
+void allocatePage()
+{
+    //if there are no pages assigned to this process
+    //first page is always assigned processPageId 0
+    if ( processHead->nextPage == NULL)
+    {
+        processHead->nextPage = pageHead;
+        processHead->nextPage->processPageId = 0;
+    }
+    else
+    {
+        //UNFINISHED
+        //need to figure out allocating the correct processPageId?
+        //will it always be 0 to memorySize or different numbers for ID
+        cout << "NOT IMPLEMENTED" << endl;
+    }
+}
 
+int getRandomPage(int prevPage, int memorySize)
+{
+    // resultant random page using "locality of reference" algorithm.
+    int randomPage;
+    int randNum = rand()%10;
+    if(randNum < 7)
+        randomPage = prevPage + (rand()%3) - 1;
+    else
+    {
+        int binRand = rand()%2;
+        if(binRand == 0)
+            randomPage = rand()%(prevPage-1);
+        else
+            randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+    }
+    if(0 <= randomPage && randomPage<memorySize)
+        return randomPage;
+    return getRandomPage(prevPage, memorySize);
+}
 
 bool fifo ()
 {
     return false;
 }
 
-bool lru()
+vector<> globalLruCache;
+bool lru(void* process)
 {
+    process = (processNode*)process;
+    int currentTime = getTimeStamp();
+    process->startTime = currentTime;
+
+
+    int prevPage = 0;
+    while((currentTime-process->startTime) < process->serviceTime)
+    {
+        //sleep for 100mSec
+        usleep(100000);
+        int randomPage = getRandomPage(prevPage, process->memorySize);
+        referencePage(randomPage, process);
+        //grab lock
+        // if in memory ?
+            // update cache, cache hit
+        //else
+        if(globalLruCache.size() == 100)
+        {
+            // evict least recently used page from cache, update freePagesHead, 
+            // process pageHead, remainingFreePages
+            // update cache miss
+        }
+        //allocate page, update lru cache, freePagesHead, process pageHead,remainingFreePages, cache hit
+        //release lock
+        currentTime = getTimeStamp();
+    }
+    //free in-memory pages used by this process
+    postProcess();
     return false;
 }
 
@@ -165,15 +229,10 @@ bool mfu()
 
 int main()
 {
-    linkedList processList;
-    processList.generateJobsAndSort( 150 );
-    processList.generateFreePageList( 100 );
-    //print statement loop to show that its sorted
-    for( processNode* cur = processList.processHead; cur != NULL; cur = cur->next )
-    {
-        cout << "Process Name: " << cur -> processName << endl;
-        cout << cur -> arrivalTime << endl;
-    }
+    processHead = generateJobsAndSort( 150 );
+    freePageHead = generateFreePageList( 100 );
     
+    //if a process has arrived on or before getTimeStamp(), create and run thread
+
     return 0;
 }
