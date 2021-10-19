@@ -8,8 +8,14 @@
 
 using namespace std;
 
-
-class Concert {
+//The concert class contains 2 2D arrays. The "seats" array is used to tell
+//which seller sold the given seat, and the other 2D array "customerSeats"
+//is used to tell us which customer number is in the given seat. When we 
+//create a Concert object, we initialize all the values of both 2D arrays 
+//to -1 and set the number of seats remaning to 100 (since all the seats
+//of the 100 seat concert are empty).
+class Concert 
+{
     public:
     int seats[ 10 ][ 10 ];
     int seatsRemaining;
@@ -29,6 +35,17 @@ class Concert {
         seatsRemaining = 100;
     }
 };
+
+//The Customer class contains the randomized arrival and service time of the customer
+//as well as the response and turnaround time (assuming the customer is assigned a seat).
+//The startTime is when the customer started being assigned a seat and the endTime is used
+//to calculate the throughput of a given seller (since we have to know when a given seller
+//finished selling their last customer in line).
+//The inQueue variable is used to describe whether a given customer has been served or not
+//or is still in a seller queue waiting to be sold a ticket to the concert. The finished
+//boolean is used to tell which sellers have been sold a ticket and is used to calculate
+//the metrics for each of the given seller types. Finally, the customerID is used to
+//differentiate each customer waiting in each of the sellers' queues.
 class Customer {
     public:
     int arrivalTime;
@@ -43,29 +60,34 @@ class Customer {
 
     Customer()
     {
-        arrivalTime = rand() % 60; //arrivalTime between 0 and 59
-        inQueue = false;
+        arrivalTime = rand() % 60; //set arrivalTime to be a random integer between 0 and 59
+        inQueue = false; //since the customer does not start in a seller's queue, set it as false
         responseTime = -1;
         turnaroundTime = -1;
-        finished = false;
+        finished = false; ///since the customer has not been sold a ticket, set "finished" as false
         startTime = -1;
         endTime = -1;
     }
 };
 
-//compare function to sorty by arrival time
+//In order to sort customers in each of the seller's queues, we need
+//a function in order to compare their arrival times with each other
+//so we know who to serve first.
 bool customerCompare( Customer* x, Customer* y )
 {
     return x->arrivalTime < y->arrivalTime;
 }
 
+//A seller object has a type (High, Medium or Low) which is a single
+//character value (H, M, or L). Then we have each seller's queue, which
+//is a vector object that holds multiple "customer" objects inside. 
+//Each seller is given an ID number, which is a single digit value between
+//0 and 6.
 class Seller {
     public:
     char sellerType;
     vector< Customer* > customerQueue;
     int sellerId;
-    
-
     Seller( char sType, int sellId, int customers )
     {
         sellerType = sType;
@@ -75,28 +97,34 @@ class Seller {
             customerQueue.push_back( new Customer() );
             //initialize service time according to the seller type
             if ( sellerId == 0 )
-                customerQueue[ i ]->serviceTime = rand() % 2 + 1;
+                customerQueue[ i ]->serviceTime = rand() % 2 + 1; //For the high seller, the service time is 1 or 2 min.
             else if ( sellerId < 4 )
-                customerQueue[ i ]->serviceTime = rand() % 3 + 2;
+                customerQueue[ i ]->serviceTime = rand() % 3 + 2; //For the medium seller, the service time is 2-4 min.
             else
-                customerQueue[ i ]->serviceTime = rand() % 4 + 4;
+                customerQueue[ i ]->serviceTime = rand() % 4 + 4; //For the medium seller, the service time is 4-7 min.
         }
+        //Sort a seller's queue by arrival time (so customers that arrive the earliest are at the front of the queue)
         sort( customerQueue.begin(), customerQueue.end(), customerCompare );
+        //Set a given customer's idea as an integer that is one more than the previous customer's ID number.
         for ( int i = 0; i < customers; i++ )
         {
             customerQueue[ i ]->customerId = i + 1;
         }
-
     }
-
 };
 
-//global Variables
+//Global variables used with the mutex and condition locks.
 pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 pthread_mutex_t concertMutex= PTHREAD_MUTEX_INITIALIZER;
+
+//Here we initialize a concert object.
 Concert concert;
 int current_time = -1;
 
+//This function handles printing out the 10x10 matrix of concert seats.
+//If a concert seat is empty, the function prints out a dash line, otherwise
+//the function prints out the type of seller (H,M,L) and the seller's ID number
+//followed by the customer's ID number.
 void printConcert()
 {
     cout << "CONCERT SEATING CHART" << endl;
@@ -141,7 +169,10 @@ void printConcert()
         cout << endl;
     }
 }
-//helper function for findAndAllocateSeat, given the row, finds an empty seat
+
+//This is a helper function for the findAndAllocateSeat function. 
+//This function checks all the seats in the concert, and if it finds
+//an empty seat, it returns 
 int findSeatInRow ( int row )
 {
     int index = -1;
