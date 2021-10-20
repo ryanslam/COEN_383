@@ -171,8 +171,8 @@ void printConcert()
 }
 
 //This is a helper function for the findAndAllocateSeat function. 
-//This function checks all the seats in the concert, and if it finds
-//an empty seat, it returns 
+//This function checks all the seats in a given row of the concert, and 
+//if it finds an empty seat in a given row, it returns that seat index.
 int findSeatInRow ( int row )
 {
     int index = -1;
@@ -186,23 +186,31 @@ int findSeatInRow ( int row )
     }
     return index;
 }
-//findAndAllocateSeat should be called when a thread has a mutex
-//if a seat was found, we allocate it and return true
-//takes an ID to determine the row order 
+
+//This function finds a free seat for a given seller. This function
+//should only be called when a thread has the mutex lock.
+//If a free seat was found, we allocate it for the given customer
+//and return true. Since each seller has to start at a different row
+//we used an array of integers for each seller type, and we move 
+//through each of the rows in order until we find a free seat in
+//a given row.
 bool findAndAllocateSeat( int id, int custId )
 {
+    //For high sellers (with ID = 0).
     if ( id == 0 )
     {
         int rowOrder[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        //Look through all 10 rows of the concert in the above order.
         for ( int i = 0; i < 10; i++ )
         {
             int row = rowOrder[ i ];
+            //Find a seat in the given row, if not, then return false
             int seat = findSeatInRow( row );
             if( seat != -1 )
             {
-                concert.seats[ row ][ seat ] = id;
-                concert.customerSeats[ row ][ seat ] = custId;
-                concert.seatsRemaining--;
+                concert.seats[ row ][ seat ] = id; //This tells us which seller sold the seat to the customer.
+                concert.customerSeats[ row ][ seat ] = custId; //This tells us which customer in a seller's queue was sold the seat.
+                concert.seatsRemaining--; //Since a seat is no longer free, we decremnet seatsRemaning by 1 to keep track whether the concert is full or not.
                 return true;
             }
         }
@@ -240,20 +248,22 @@ bool findAndAllocateSeat( int id, int custId )
     }
     return false;
 }
-// seller thread to serve one time slice (1 minute)
+
+//This is the function that each of the seller threads execute. 
+//to serve one time slice (1 minute)
 void *sell( void *arg )
-{    
+{
+    //Convert the argument of the "sell" function to a pointer to a "seller" object.
     Seller *seller = (Seller *) arg;
     bool servicing = false;
     //check if there are currently customers in the event queue
     while ( current_time < 60 || servicing )
     {
-
-        //usleep( 3000 );
         pthread_mutex_lock( &concertMutex);
         pthread_cond_wait(&cond, &concertMutex);
 
-        //output for when a customer arrives in the queue
+        //When a customer arrives at a given seller's queue, we print out the current time
+        //as well as the seller's ID number along with the customer's ID number.
         for ( int i = 0; i < seller->customerQueue.size(); i++ )
         {
             if ( seller->customerQueue[ i ]->arrivalTime <= current_time && !seller->customerQueue[ i ]->inQueue && 
@@ -269,23 +279,24 @@ void *sell( void *arg )
             }
         }
 
-        //algorithm where service customers
+        //This for loop is where we service all of the customers of a given seller.
         for ( int i = 0; i < seller->customerQueue.size(); i++ )
         {
-            //if customer not in queue, but is finished, go to next iteration
+            //If the customer is not in the queue, but has finished being served, we have to go to the next customer in line.
             if ( !seller->customerQueue[ i ]->inQueue && seller->customerQueue[ i ]->finished )
             {
                 continue;
             }
             else if ( seller->customerQueue[ i ]->inQueue )
             {
-                //if service time is 0, we now need to assign them a seat
+                //If service time is 0, this means that the customer has not yet been served and
+                //we now need to assign them a seat.
                 if ( seller->customerQueue[ i ]->serviceTime == 0 )
                 {
-                    //a seat was found
+                    //If we have found a seat for the customer, we print out the current time, the seller's ID
+                    //number as well as the customer's ID number. Then we calculate the turnaround time 
                     if ( findAndAllocateSeat( seller->sellerId, seller->customerQueue[ i ]->customerId ) )
                     {
-                        //usleep( 1000 );
                         if ( seller->sellerId >= 4 )
                             cout << current_time <<  ":\tA seat was sold by seller " << seller-> sellerType << seller->sellerId - 3;
                         else
@@ -301,11 +312,9 @@ void *sell( void *arg )
                         seller->customerQueue[ i ]->endTime = current_time; 
                         servicing = false;
                         printConcert();
-                        //pthread_mutex_unlock(&concertMutex);
                     }
                     else
                     {
-                        //usleep( 1000 );
                         //also set end time here so we can keep track of final throughput
                         if ( seller->sellerId >= 4 )
                             for(int j = i; j < seller->customerQueue.size(); j++)
@@ -320,7 +329,6 @@ void *sell( void *arg )
                         seller->customerQueue[ i ]->endTime = current_time; 
                         cout << current_time <<  ":\tThe concert is sold out" << endl;
                         pthread_mutex_unlock(&concertMutex);
-                        //printConcert();
                         return NULL;
                     }
                 }
@@ -335,7 +343,6 @@ void *sell( void *arg )
                         servicing = true;
                     }
                     seller->customerQueue[ i ]->serviceTime--;
-                    //pthread_mutex_unlock(&concertMutex);  
                 }
                 break;
             }
@@ -348,6 +355,8 @@ void *sell( void *arg )
     return NULL; // thread exits
     
 }
+
+//This function
 void wakeup_all_seller_threads()
 {
     pthread_mutex_lock(&concertMutex);
@@ -355,6 +364,8 @@ void wakeup_all_seller_threads()
     pthread_mutex_unlock(&concertMutex);
 }
 
+//This function prints all the statistical information on a per seller type 
+//basis. 
 void printMetrics( vector< Seller* > sellers)
 {
     float avgTurn = 0;
@@ -402,10 +413,7 @@ void printMetrics( vector< Seller* > sellers)
             avgResp = 0;
             avgThroughput = 0;
             totalCustomersServed = 0;
-            totalCustomers = 0;
-
-
-            
+            totalCustomers = 0;   
         }
         else if( i == 3)
         {
