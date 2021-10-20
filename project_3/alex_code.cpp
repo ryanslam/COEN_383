@@ -289,12 +289,15 @@ void *sell( void *arg )
             }
             else if ( seller->customerQueue[ i ]->inQueue )
             {
-                //If service time is 0, this means that the customer has not yet been served and
-                //we now need to assign them a seat.
+                //If service time is 0, this means that the customer has completed the process of 
+                //getting a seat, and now may be assigned a seat.
                 if ( seller->customerQueue[ i ]->serviceTime == 0 )
                 {
                     //If we have found a seat for the customer, we print out the current time, the seller's ID
                     //number as well as the customer's ID number. Then we calculate the turnaround time 
+                    //and set the booleans finished to true (since we have found a seat for the customer)
+                    //and the boolean inQueue to false (since we are done serving the customer, they are no longer
+                    //in the seller's queue). Then we print the concert seating chart to show the addition we have made.
                     if ( findAndAllocateSeat( seller->sellerId, seller->customerQueue[ i ]->customerId ) )
                     {
                         if ( seller->sellerId >= 4 )
@@ -303,19 +306,20 @@ void *sell( void *arg )
                             cout << current_time <<  ":\tA seat was sold by seller " << seller->sellerType << seller->sellerId;
                         cout << " to customer " << seller->customerQueue[ i ]->customerId << endl;
                         //turnaround time for when the customer gets the seat
-                        seller->customerQueue[ i ]->turnaroundTime = current_time -
-                            seller->customerQueue[ i ]->arrivalTime;
-                        //used for calculating throughput later
+                        seller->customerQueue[ i ]->turnaroundTime = current_time - seller->customerQueue[ i ]->arrivalTime;
                         seller->customerQueue[ i ]->finished = true;
-                        //remove customer from queue if 
                         seller->customerQueue[ i ]->inQueue = false;
                         seller->customerQueue[ i ]->endTime = current_time; 
                         servicing = false;
                         printConcert();
                     }
+
+                    //Otherwise, if there are no empty seats, this means that the concert is full and we need to turn 
+                    //everyone still waiting in a seller's queue away. Print out all the customers that were turned 
+                    //away from a given seller.
                     else
                     {
-                        //also set end time here so we can keep track of final throughput
+                        //Also set end time here so we can keep track of the final throughput for each seller type.
                         if ( seller->sellerId >= 4 )
                             for(int j = i; j < seller->customerQueue.size(); j++)
                             {
@@ -327,14 +331,15 @@ void *sell( void *arg )
                                 cout << current_time <<  ":\tThe conert is sold out, " << "customer " << seller->customerQueue[ j ]->customerId << " of seller " << seller-> sellerType << seller->sellerId << " was rejected " << endl;
                             }
                         seller->customerQueue[ i ]->endTime = current_time; 
-                        cout << current_time <<  ":\tThe concert is sold out" << endl;
                         pthread_mutex_unlock(&concertMutex);
                         return NULL;
                     }
                 }
                 else
                 {
-                    //first time a customer is serviced, we need to set the responseTime
+                    //If this is the first time a customer is serviced, we need to set the 
+                    //response time and the start time for that given customer. Now the 
+                    //customer can be served in the future.
                     if ( seller->customerQueue[ i ]->responseTime == -1 )
                     {
                         seller->customerQueue[ i ]->responseTime = current_time - 
@@ -342,6 +347,9 @@ void *sell( void *arg )
                         seller->customerQueue[ i ]->startTime = current_time;
                         servicing = true;
                     }
+                    //If the customer has already started being service by a seller, then 
+                    //we decrease the seller's service time by 1 to act as though time 
+                    //has passed for one minute.
                     seller->customerQueue[ i ]->serviceTime--;
                 }
                 break;
@@ -349,14 +357,12 @@ void *sell( void *arg )
         }
         pthread_mutex_unlock(&concertMutex);
     }
-    // Serve any buyer available in this seller queue that is ready
-    // now to buy ticket till done with all relevant buyers in their queue
-
     return NULL; // thread exits
     
 }
 
-//This function
+//This function wakes up all of the seller threads for them to start servicing
+//customers.
 void wakeup_all_seller_threads()
 {
     pthread_mutex_lock(&concertMutex);
@@ -365,7 +371,7 @@ void wakeup_all_seller_threads()
 }
 
 //This function prints all the statistical information on a per seller type 
-//basis. 
+//basis.
 void printMetrics( vector< Seller* > sellers)
 {
     float avgTurn = 0;
@@ -389,8 +395,8 @@ void printMetrics( vector< Seller* > sellers)
                 turn += sellers[ i ]->customerQueue[ j ]->turnaroundTime;
                 resp += sellers[ i ]->customerQueue[ j ]->responseTime;
                 customers++;
-                //endtime set this way since customerQueue is organized by arrivalTime
-                //therefore the last finished customer has the highest endtime
+                //endtime is set this way since customerQueue is organized by arrivalTime
+                //therefore the last finished customer has the largest endtime value
                 endTime = sellers[ i ]->customerQueue[ j ]->endTime;
                 totalCustomersServed++;
             }
@@ -453,13 +459,12 @@ void printMetrics( vector< Seller* > sellers)
 
 int main( int argc, char* argv[] )
 {
-    //srand( 1 );
     int i;
     pthread_t tids[10];
     char seller_type;
     int customers = atoi( argv[ 1 ] );   
     // Create necessary data structures for the simulator.
-    // Create buyers list for each seller ticket queue based on the
+    // Create customer list for each seller ticket queue based on the
     // N value within an hour and have them in the seller queue.
     // Create 10 threads representing the 10 sellers.
     vector< Seller* > sellers;
@@ -487,7 +492,7 @@ int main( int argc, char* argv[] )
         usleep( 5000 );
         wakeup_all_seller_threads();
     }
-    //wait for all seller threads to exit
+    //wait for all seller threads to finish their work.
     for (i = 0 ; i < 10 ; i++)
     {
         pthread_join( tids[i], NULL );
@@ -496,6 +501,5 @@ int main( int argc, char* argv[] )
     printConcert();
     cout << endl;
     printMetrics( sellers );    
-    // Printout simulation results
     return 0;
 }
