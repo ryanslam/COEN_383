@@ -44,6 +44,9 @@
         "unordered_map": "cpp",
         "vector": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "list": "cpp",
+        "hashtable": "cpp"
     }
 }
