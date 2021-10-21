@@ -162,10 +162,7 @@ int isPageInMemory(vector<pageNode*> &cache, int pageId, int processId)
     {
         if( cache[cache_index]->usingProcessId == processId && 
             cache[cache_index]->processPageId == pageId )
-            {
-                pthread_mutex_unlock(&lruMutex);
                 return cache_index;
-            }
     }
     return -1;
 }
