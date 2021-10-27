@@ -1,8 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <unistd.h>
-#include <pthread.h>
 #include <vector>
+#include <random>
+#include <algorithm>
 using namespace std;
 
 struct pageNode {
@@ -44,39 +45,14 @@ pageNode* freePageHead;
 int remainingFreePages = 100;
 processNode* processHead;
 int timeStamp = 0;
-pthread_mutex_t timerMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t freePageHeadMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t processHeadMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t lruMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t fifoMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
-vector<pageNode*> globalLruCache;
 //cant use queue, need to use vector so we can remove from middle of list
 vector<int> fifoCache;
-pageNode* firstPage;
+float hits = 0;
+float misses = 0;
+float swaps = 0;
+vector<int> memMap;
 
-void* runTimer(void* sec)
-{
-    int *psec = (int*)(sec);
-    int seconds = *psec;
-    for(int i=0; i<seconds; i++)
-    {
-        usleep(10000); //sleep for a sec and update timer
-        pthread_mutex_lock(&timerMutex);
-        timeStamp++;
-        pthread_mutex_unlock(&timerMutex);
-    }
-    return NULL;
-}
 
-int getTimeStamp()
-{
-    int ts;
-    pthread_mutex_lock(&timerMutex);
-    ts = timeStamp;
-    pthread_mutex_unlock(&timerMutex);
-    return ts;
-}
 
 //will use for FIFO
 processNode* mergeSort(processNode* head)
@@ -178,23 +154,60 @@ int getRandomPage(int prevPage, int memorySize)
 {
     // resultant random page using "locality of reference" algorithm.
     int randomPage;
-    int randNum = rand()%10;
-    if(randNum < 7)
+    int randNum = rand() % 10;
+    int deltaI;
+    //values from 0-6
+    if ( randNum < 7 )
     {
-        randomPage = prevPage + (rand()%3) - 1;
-        if ( randomPage == -1 )
+        //values from 0 - 2
+        deltaI = rand() % 3;
+        //values from -1 to 1
+        deltaI = deltaI - 1;
+        //need to wraparound to the memorySize - 1
+        if ( prevPage + deltaI == - 1 )
         {
-            //wrapping around to the max page if we go negative
             randomPage = memorySize - 1;
+        }
+        else
+        {
+            //dont need to wraparound
+            randomPage = prevPage + deltaI;
         }
     }
     else
     {
-        int binRand = rand()%2;
-        if(binRand == 0)
-            randomPage = rand()%(prevPage-1);
-        else
-            randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+        //if randNum 7-9
+        //random page should be from 0 <= randomPage <= prevPage - 2 or
+        //random page should be prevPage + 2 <= randomPage <= memorySize - 1
+        // rand() % ( max - min + 1 ) + min;
+        // max and min inclusivie
+        int binaryRand = rand() % 2;
+        if( binaryRand == 1 )
+        {
+            //need to check if prevPage -2 + 1 <= 0
+            //if it is, we can't use rand(), so get a new random number
+            if ( ( prevPage - 2 + 1 )<= 0 )
+            {
+                getRandomPage( prevPage, memorySize );
+            }
+            else
+            {
+                //values from 0 to prevPage - 2
+                randomPage = ( rand() % ( prevPage - 2 + 1) );
+            }
+        }
+        else{
+            //check if rand value is valid
+            if( ((memorySize - 1) - (prevPage + 2)) + 1 <= 0 )
+            {
+                getRandomPage( prevPage, memorySize );
+            }
+            else
+            {
+            //values from prevPage + 2 to memorySize-1 inclusive
+            randomPage = ( rand()%((memorySize - 1) - (prevPage + 2) + 1)) + prevPage + 2;
+            }
+        }
     }
     return randomPage;
 }
@@ -202,19 +215,55 @@ int getRandomPage(int prevPage, int memorySize)
 
 //allocates a page to the process
 //removes the current head of the free pages adds that as the head of the pages a process owns 
+//tail of processPageHead is always the first process inserted into the processPageHead list
 //MUST HAVE FREE PAGES
-void allocatePage( pageNode** processPageHead, int id )
+void allocatePage( pageNode** processPageHead, int id, int pageId )
 {
-    //need to check if processPageHead is not NULL
+    //cout << "FREE PAGES BEFORE STARTING ALLOCATION" << endl;
+    // for ( pageNode* x = freePageHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
     pageNode* tempHead = freePageHead;
+    if(freePageHead == NULL)
+        cout << "NULL" <<endl;
+    //if there is only one free page
+    if ( tempHead->next == NULL)
+    {    
+        tempHead = new pageNode;
+        tempHead->frameId = freePageHead->frameId;
+        freePageHead = NULL;
+    }
+    else{
+    freePageHead = freePageHead->next;
+    }
+    pageNode* hi = *processPageHead;
+    // cout << "PAGE LIST BEFORE ALLOCATION" << endl;
+    // for ( pageNode* x = hi; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
     //keeping track of the page order
     fifoCache.push_back( tempHead->frameId );
-    if ( freePageHead->next != NULL)
-        freePageHead = freePageHead->next;
-    tempHead->next = *processPageHead;
+    cout << endl;
+    
+    cout << "PAGE " << tempHead->frameId << " ALLOCATED TO " << id << endl;
+    tempHead->processPageId = pageId;
     tempHead->usingProcessId = id;
+    tempHead->next = *processPageHead;
+    // cout << "PAGE LIST AFTER ALLOCATION" << endl;
+    // for ( pageNode* x = tempHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
+    //tempHead becomes the new head of the process's pages
     *processPageHead = tempHead;
     remainingFreePages--; 
+    // cout << "FREE PAGES AFTER ALLOCATION" << endl;
+    // for ( pageNode* x = freePageHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
 }
 
 //this should only be called when there are no free pages currently in the freePageHead
@@ -223,42 +272,56 @@ void findAndRemovePage()
     //iterate through each process
     for( processNode* curProcess = processHead; curProcess != NULL; curProcess = curProcess->next )
     {
-        for( pageNode* curPage = curProcess->pageHead; curPage != NULL; curPage = curPage->next )
+        //cout << "LOOKING FOR" << fifoCache.front() << endl;
+        pageNode* head = curProcess->pageHead;
+        pageNode* tail = head;
+        if( head == NULL )
         {
-            //if the next page is the page we want to remove
-            //need to account for when a page only has one page in the pageHead
-            if( curPage->next == NULL && curPage->frameId == fifoCache.front())
+            continue;
+        }
+        else if( head->next == NULL )
+        {
+            if( head->frameId == fifoCache.front() )
             {
+                cout << "ONE NODE" << endl;
+                cout << "DELETING THIS: " << fifoCache.front() << endl;
+                //this means the page list is only 1 page long
+                //make freePageHead  a copy of the head
                 freePageHead = new pageNode;
-                freePageHead->frameId = curPage->frameId;
-                freePageHead->next = NULL;
+                freePageHead->frameId = head->frameId;
+                freePageHead->usingProcessId = head->usingProcessId;
+                cout << "One Page: ";
+                cout << "\tPage "<< freePageHead->frameId;
+                cout << "\tEvicted from Process " << freePageHead->usingProcessId << endl;  
                 freePageHead->usingProcessId = -1;
                 freePageHead->processPageId = -1;
-                cout << " Page "<< freePageHead->frameId;
-                cout << " Evicted from " << freePageHead->usingProcessId << endl;
                 fifoCache.erase( fifoCache.begin() );
-                cout << " HEREREREERE" << freePageHead->frameId << endl;
-                curPage = NULL;
                 remainingFreePages++;
-                cout << " HEREREREERE" << freePageHead->frameId << endl;
+                //does this work or do I need to check
+                curProcess->pageHead = NULL;
+
                 return;
             }
-            else if ( curPage->next->frameId == fifoCache.front() )
+        }
+        else
+        {
+            tail = head->next;
+            //while we are not at the tail
+            while( tail->next != NULL)
             {
-                freePageHead = new pageNode;
-                freePageHead->frameId = curPage->next->frameId;
-                freePageHead->next = NULL;
-                freePageHead->usingProcessId = -1;
-                freePageHead->processPageId = -1;
-                //making sure to set the next pointer correctly
-                pageNode* tempPage = curPage->next->next;
-                //set the removed node to NULL
-                curPage->next = NULL;
-                curPage->next = tempPage;
-                cout << " Page "<< freePageHead->frameId;
-                cout << " Evicted from " << freePageHead->usingProcessId << endl;
-                cout << curPage->next->frameId << endl;
-                
+                tail = tail->next;
+                head = head->next;
+            }
+            if (tail->frameId == fifoCache.front())
+            {
+                cout << "MULTIPLE NODES" << endl;
+                cout << "DELETING THIS: " << fifoCache.front() << endl;
+                head->next = NULL;
+                freePageHead = tail;
+                //do this work lol
+                cout << "Multiple Pages Owned: ";
+                cout << "\tPage "<< freePageHead->frameId;
+                cout << "\tEvicted from Process " << freePageHead->usingProcessId << endl; 
                 fifoCache.erase( fifoCache.begin() );
                 remainingFreePages++;
                 return;
@@ -267,8 +330,70 @@ void findAndRemovePage()
     }
 }
 
-bool fifo()
+//makes a copy of the pages a process has, and then appends it to the free page list
+//works perfectly from what I can tell
+void removePagesFromProcess( pageNode** processPageHead )
 {
+    pageNode* tempHead = new pageNode;
+    pageNode* tempTail = tempHead;
+    //making a copy of every page in the process so I can then allocate
+    for ( pageNode* cur = *processPageHead; cur != NULL; cur = cur->next )
+    {
+        //also need to remove each frame from the cache
+        fifoCache.erase( remove( fifoCache.begin(), fifoCache.end(), cur->frameId ), fifoCache.end());
+        tempTail->frameId = cur->frameId;
+        tempTail->next = cur->next;
+        tempTail->processPageId = -1;
+        tempTail->usingProcessId = -1;
+        remainingFreePages++;
+        tempTail = tempTail->next;
+    }
+    pageNode* temp = freePageHead;
+    
+    // cout << " REMOVING PAGES FROM FINISHED PROCESS CURRNET FREE" << endl;
+    // for ( pageNode* x = freePageHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
+    // cout << "WHAT WE APPENDING " << endl;
+    // for ( pageNode* x = tempHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
+    if ( temp == NULL )
+    {
+        freePageHead = tempHead;
+    }
+    else
+    {
+        //iterate until at the tail
+        while ( temp->next != NULL )
+            temp = temp->next;
+        temp->next = tempHead;
+        //cout << "has at least one node" << endl;
+    }
+    // cout << "CHECKING END STATUS" << endl;
+    // for ( pageNode* x = freePageHead; x != NULL; x = x->next)
+    // {
+    //     cout << x->frameId << endl;
+    // }
+    *processPageHead = NULL;
+}
+
+void printMemMap()
+{
+    for( int i = 0; i < memMap.size() ; i++ )
+    {
+        if ( memMap[ i ] == - 1 )
+            cout << ".";
+        else
+            cout << memMap[i] <<  "-";
+    }
+    cout << endl;
+}
+void fifo( int ref )
+{
+    
     //processNode* process = ( processNode* ) curProcess;
     //lock on every time update
     //1000 msec in a second, 60,000 msec in a minute
@@ -282,32 +407,44 @@ bool fifo()
             //each second we will check for a new process to run
             if ( timeStamp % 10 == 0 )
             {
+                //cout << "one second" << endl;
+                //adding process to the queue if there are enough remaining pages
                 if ( cur->startTime == -1 && remainingFreePages >= 4 && cur->arrivalTime <= timeStamp / 10 )
                 {
                     cur->startTime = timeStamp / 10;
-                    cout << "Time: " << cur->startTime;
-                    cout << " Process ID: " << cur->processId;
-                    cout << " Entered ";
-                    cout << " Size: " << cur->memorySize;
-                    cout << " Service Time: " << cur->serviceTime << endl;
+                    cout << "Time: " << cur->startTime << ".0";
+                    cout << "\tProcess ID: " << cur->processId;
+                    cout << "\tEntered ";
+                    cout << "\tSize: " << cur->memorySize;
+                    cout << "\tService Time: " << cur->serviceTime << endl;
                     //also need to print the memory map here, not sure what that will look like yet
                     cur->startTime = timeStamp;
-                    allocatePage( &cur->pageHead, cur->processId );
-                    //processes always start with page id of 0
-                    cur->pageHead->processPageId = 0;
+                    allocatePage( &cur->pageHead, cur->processId, 0 );
                     //need this for random page function
                     cur->previousPageId = 0;
+                    memMap.push_back( cur->processId );
+                    swaps++;
+                    if( ref > 0 )
+                        printMemMap();
                     //after allocating page, we consider this the 0th iteration, so we dont want to make a memory reference
                     continue;
                 }
-                if( cur->serviceTime > 0 )
+                
+                //decrementing service time every second
+                if( cur->serviceTime > 0 && cur->startTime != -1 )
                 {
                     cur->serviceTime--;
                     if ( cur->serviceTime == 0)
                     {
+                        cout << "Time: " << timeStamp / 10 << ".0";
+                        cout << "\tProcess ID: " << cur->processId;
+                        cout << "\thas finished " << endl;
                         //removeALLPAGES;
+                        removePagesFromProcess( &cur->pageHead );
                         //set process as finished, take all of the pages away and put it back to free list
                         cur->finished = true;
+                        if (ref > 0 )
+                            printMemMap();
                     }
                 }
             }
@@ -318,6 +455,7 @@ bool fifo()
             }
             else if ( cur->startTime >= 0 )
             {
+                //cout << "memory access" << endl;
                 //make a memory access 
                 int pageId = getRandomPage( cur->previousPageId, cur->memorySize );
                 //need to check if  pageId exists in the process
@@ -327,112 +465,92 @@ bool fifo()
                     if ( pageTracker->processPageId == pageId )
                         inMemory = true;
                 }
+                //cout << "after check in memory" << endl;
                 //if the page was in memory, i.e. a process has it, we dont have to do anything
                 if ( inMemory == true )
                 {
                     cur->previousPageId = pageId;
-                    cout << "Time: " << timeStamp / 10;
-                    cout << " Process ID: " << cur->processId;
-                    cout << " Referenced Page in Memory:  " << pageId;
-                    cout << " No Page Evicted " << endl;
-                    
+                    cout << "Time: " << timeStamp / 10 << "." << timeStamp % 10;
+                    cout << "\tProcess ID: " << cur->processId;
+                    cout << "\tReferenced Page in Memory:  " << pageId;
+                    cout << "\tNo Page Evicted " << endl; 
+                    hits++;
                 }
                 else
                 {
+                    misses++;
                     cout << "Time: " << timeStamp / 10 << "." << timeStamp % 10;
-                    cout << " Process ID: " << cur->processId;
-                    cout << " Referenced Page Not in Memory:  " << pageId;
+                    cout << "\tProcess ID: " << cur->processId;
+                    cout << "\tReferenced Page Not in Memory:  " << pageId;
                     //if page not in memory, check if there are any free pages
+                    //this do not get called because many free pages
                     if ( remainingFreePages == 0 )
                     {
                         //no free pages, so we do FIFO
                         //something wrong with this function
+                        cout << endl;
+                        cout << "OUT OF FREE PAGES" << endl;
                         findAndRemovePage();
-                        allocatePage( &cur->pageHead, cur->processId );
+                        //cout << freePageHead->frameId << endl;
+                        allocatePage( &cur->pageHead, cur->processId, pageId );
                     }
                     else
                     {
                         //there are free pages, so freely allocate page
-                        allocatePage( &cur->pageHead, cur->processId );
-                        cout << " Free Page Added to Process " << endl;
+                        //cout << "PREALLOCATE WITH FREE" << endl;
+                        allocatePage( &cur->pageHead, cur->processId, pageId );
+                        //cout << "HERE" << endl;
+                        cout << "\tFree Page Added to Process " << endl;
                     }
+                }
+                ref --;
+                memMap.push_back( cur->processId );
+                if ( ref == 0 )
+                {
+                    //after 100 page references we finish
+                    return;
                 }
             }
             else
             {
                 //end the for loop when we get to a process that isnt running or finished
+                //if no memory references at this time, we will push back a -1 to print as a hole later
+                memMap.push_back( -1 );
                 break;
             }     
         }
         timeStamp++;
     }
-    return false;
+    return;
 }
 
 int main()
 {
+    for (int i = 0; i < 5; i ++ )
+    {
+        memMap.clear();
+        processHead = generateJobsAndSort( 150 );
+        freePageHead = generateFreePageList( 100 );
+        fifoCache.clear();
+        timeStamp = 0;
+        fifo( -1);
+    }
+    float hitRate = hits/ ( hits + misses);
+    float averageRef = ( hits + misses ) / 5;
+    float avgSwaps = swaps / 5;
+    
+    int references = 100;
+    memMap.clear();
     processHead = generateJobsAndSort( 150 );
     freePageHead = generateFreePageList( 100 );
-    fifo();
-    //pthread_t tids[150];
-    //if a process has arrived on or before timestamp, create and run thread
-    //processNode* curProcess = processHead;
-
-    // pthread_t timer;
-    // 60 seconds in min = 60,000 microseconds
-    // 60,000/100 microseconds = 6000 updates
-    //int updates = 6000; 
-    // pthread_create(&timer, NULL, runTimer, (void*)&sec);
-
-
-    //int curTime = getTimeStamp();
-    int threadIdIndex = 0, i = 0;
-    // while(timeStamp < updates && curProcess)
-    // {
-    //     while( curProcess && curProcess->arrivalTime  <= timeStamp && timeStamp < updates)
-    //     {
-    //         if(remainingFreePages>=4)
-    //         {              
-    //             //initial reference : page-0
-    //             pthread_mutex_lock(&freePageHeadMutex);
-
-    //             remainingFreePages--;
-                
-    //             freePageHead->processPageId = 0;
-    //             freePageHead->usingProcessId = curProcess->processId;
-
-    //             //taking the first page from free pages
-    //             pageNode* temp = freePageHead;
-    //             freePageHead = freePageHead->next;
-
-    //             pthread_mutex_unlock(&freePageHeadMutex);
-
-    //             pthread_mutex_lock(&fifoMutex);
-    //             //globalLruCache.insert(globalLruCache.begin(), temp);
-    //             pthread_mutex_unlock(&fifoMutex);
-
-    //             //making temp the new pageHead for the process
-    //             //temp was the head of the free pages earlier
-    //             pthread_mutex_lock(&processHeadMutex);
-    //             temp->next = curProcess->pageHead;
-    //             curProcess->pageHead = temp;
-    //             pthread_mutex_unlock(&processHeadMutex);
-                
-    //             //create thread to keep track of the current process
-    //             pthread_create(&tids[i++], NULL, fifo, (void*)curProcess);
-    //             curProcess = curProcess->next;
-    //             threadIdIndex++;
-    //         }
-    //         wakeup_all_process_threads();
-    //         usleep( 10000 );
-    //         timeStamp++;
-    //         //curTime = getTimeStamp();
-    //     }
-    //     //curTime = getTimeStamp();
-    // }
-
-    // for(int i=0; i<threadIdIndex; i++)
-    //     pthread_join( tids[i], NULL );
+    fifoCache.clear();
+    timeStamp = 0;
+    fifo( references );
+    printMemMap();
+    cout << "Hit Rate over 5 runs: " << hitRate << endl;
+    cout << "Average Number of Page References: " << averageRef << endl;
+    cout << "Average Number of Processes Swapped In: " << avgSwaps << endl;
+    
 
     return 0;
 }
