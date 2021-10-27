@@ -133,6 +133,8 @@ pageNode* generateFreePageList( int pages )
     pageNode* tail = head;
     for ( int i = 0; i < pages; i++ )
     {
+        //iniatilize memMap to 
+        memMap.push_back( -1 );
         newPageNode = new pageNode();
         newPageNode->frameId = i;
         if(!head)
@@ -225,6 +227,8 @@ void allocatePage( pageNode** processPageHead, int id, int pageId )
     //     cout << x->frameId << endl;
     // }
     pageNode* tempHead = freePageHead;
+    //shows that the process 
+    memMap[ freePageHead->frameId ] = id;
     if(freePageHead == NULL)
         cout << "NULL" <<endl;
     //if there is only one free page
@@ -235,7 +239,7 @@ void allocatePage( pageNode** processPageHead, int id, int pageId )
         freePageHead = NULL;
     }
     else{
-    freePageHead = freePageHead->next;
+        freePageHead = freePageHead->next;
     }
     pageNode* hi = *processPageHead;
     // cout << "PAGE LIST BEFORE ALLOCATION" << endl;
@@ -341,6 +345,7 @@ void removePagesFromProcess( pageNode** processPageHead )
     {
         //also need to remove each frame from the cache
         fifoCache.erase( remove( fifoCache.begin(), fifoCache.end(), cur->frameId ), fifoCache.end());
+        memMap[ cur->frameId ] = -1;
         tempTail->frameId = cur->frameId;
         tempTail->next = cur->next;
         tempTail->processPageId = -1;
@@ -384,10 +389,13 @@ void printMemMap()
 {
     for( int i = 0; i < memMap.size() ; i++ )
     {
+        if ( i % 10 == 0 && i != 0 )
+            cout << endl;
         if ( memMap[ i ] == - 1 )
-            cout << ".";
+            cout << "|.|";
         else
-            cout << memMap[i] <<  "-";
+            cout << "|" << memMap[ i ] <<  "|";
+        
     }
     cout << endl;
 }
@@ -422,10 +430,8 @@ void fifo( int ref )
                     allocatePage( &cur->pageHead, cur->processId, 0 );
                     //need this for random page function
                     cur->previousPageId = 0;
-                    memMap.push_back( cur->processId );
                     swaps++;
-                    if( ref > 0 )
-                        printMemMap();
+                    printMemMap();
                     //after allocating page, we consider this the 0th iteration, so we dont want to make a memory reference
                     continue;
                 }
@@ -440,11 +446,10 @@ void fifo( int ref )
                         cout << "\tProcess ID: " << cur->processId;
                         cout << "\thas finished " << endl;
                         //removeALLPAGES;
+                        printMemMap();
                         removePagesFromProcess( &cur->pageHead );
                         //set process as finished, take all of the pages away and put it back to free list
                         cur->finished = true;
-                        if (ref > 0 )
-                            printMemMap();
                     }
                 }
             }
@@ -504,7 +509,6 @@ void fifo( int ref )
                     }
                 }
                 ref --;
-                memMap.push_back( cur->processId );
                 if ( ref == 0 )
                 {
                     //after 100 page references we finish
@@ -515,7 +519,6 @@ void fifo( int ref )
             {
                 //end the for loop when we get to a process that isnt running or finished
                 //if no memory references at this time, we will push back a -1 to print as a hole later
-                memMap.push_back( -1 );
                 break;
             }     
         }
