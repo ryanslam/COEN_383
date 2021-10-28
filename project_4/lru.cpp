@@ -128,8 +128,10 @@ pageNode* generateFreePageList( int pages )
     {
         newPageNode = new pageNode();
         newPageNode->frameId = i;
+        // if free page list is empty, make current node as head of free list
         if(!head) head = newPageNode;
         else{
+            // add current node to the head of free list
             newPageNode->next = head;
             head = newPageNode;
         }
@@ -140,6 +142,7 @@ pageNode* generateFreePageList( int pages )
 
 int isPageInMemory(vector<pageNode*> &cache, int pageId, int processId)
 {
+    // checks if page is in memory(lru cache), return index in cache if in memory else return -1
     for(int cache_index = 0; cache_index < cache.size(); cache_index++)
     {
         if( cache[cache_index]->usingProcessId == processId && 
@@ -166,10 +169,11 @@ bool removeFrameFromProcess(pageNode* page)
         }
         if(curPage != NULL)
         {
+            // if the the page to free is at head of the page list of process, then make the head point to the next page
             if(temp != NULL)
                 temp->next = curPage->next;
             else
-                process->pageHead = curPage->next;
+                process->pageHead = curPage->next; // removing current page
 
             curPage->next = freePageHead;
             freePageHead = curPage;
@@ -185,6 +189,7 @@ bool removeFrameFromProcess(pageNode* page)
 
 void removeFramesPostProcess(processNode* process)
 {
+    // removes all the frames holded by the process and updates memMap too.
     while(process->pageHead != NULL)
     {
         pageNode* temp = process->pageHead;
@@ -217,6 +222,7 @@ int getRandomPage(int prevPage, int memorySize)
     if(randNum < 7)
     {
         randomPage = prevPage + (rand()%3) - 1;
+        // circular
         if(randomPage < 0)
             randomPage = memorySize - 1;
         else if(randomPage == memorySize)
@@ -224,10 +230,13 @@ int getRandomPage(int prevPage, int memorySize)
     }
     else
     {
+        // if we cant go left, only option is to go right
         if( prevPage-1 <=0)
             randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+        // if we cant go right, only option is to go left
         else if((memorySize-prevPage-2) <= 0)
             randomPage = rand()%(prevPage-1);
+        // we we can go in both directions then, use rand to decide which direction to go
         else
         {
             int binRand = rand()%2;
@@ -261,16 +270,20 @@ void printMemMap()
 
 void lru(int pageRefCount)
 {
+    // to track lru cache hits, misses
     int hitCount = 0;
     int missCount = 0;
 
+    // assuming each iteration as 100msec
     for(int timeStamp = 0; timeStamp < 600; timeStamp++)
     {
         for(processNode *curProcess = processHead; curProcess != NULL; curProcess = curProcess->next)
         {
+            // if pageRefCount is passed then, we exit after those many pages have been referenced by all the processess
             if(pageRefCount == 0)
                 return;
 
+            // if a new process has arrived at this time, check if there are atleast 4 remaining free pages to allocate for this process
             if(!curProcess->started && curProcess->arrivalTime <= timeStamp/10 && remainingFreePages >= 4)
             {
                 // initial page reference : page-0
@@ -285,15 +298,19 @@ void lru(int pageRefCount)
 
                 cout << "Allocated new frame id: " << freePageHead->frameId << " to process id: " << curProcess->processId << endl; 
 
+                // using first page from the free page list
                 pageNode* temp = freePageHead;
                 freePageHead = freePageHead->next;
 
+                // updating members of the first free page node to track for this current process
                 temp->processPageId = 0;
                 temp->usingProcessId = curProcess->processId;
 
+                //updating page list of process by adding free node to top of that list, now process head points to the current free page node allocated
                 temp->next = curProcess->pageHead;
                 curProcess->pageHead = temp;
 
+                //updating lru cache and memMap
                 lruCache.insert(lruCache.begin(), temp);
                 memMap[ lruCache[0]->frameId ] = curProcess->processId;
 
@@ -303,21 +320,24 @@ void lru(int pageRefCount)
                 cout << ", Frame Id in Memory:  " << temp->frameId;
                 cout << ", No Page Evicted " << endl; 
 
+                //tracking number of processess successfully started execution
                 processessSwappedIn++;
                 printMemMap();
                 continue;
             }
 
+            // if a process has started and not finished yet the, make a memory reference
             if(curProcess->started && !curProcess->finished)
             {
                 // make a page reference
                 int randomPage = getRandomPage(curProcess->prevPageReferenced, curProcess->memorySize);
                 pageRefCount--;
 
+                // checking if page is in memory
                 int pageIndexIncache = isPageInMemory(lruCache, randomPage, curProcess->processId);
                 if(pageIndexIncache != -1)
                 {
-                    // referenced page is in memory
+                    // referenced page is in memory, update lru cache
                     pageNode* temp = lruCache[pageIndexIncache];
                     lruCache.erase(lruCache.begin() + pageIndexIncache);
                     lruCache.insert(lruCache.begin(), temp);
@@ -328,16 +348,18 @@ void lru(int pageRefCount)
                     cout << ", Frame Id in Memory:  " << temp->frameId;
                     cout << ", No Page Evicted " << endl; 
 
-                    hitCount++;
+                    hitCount++; // update hit count
                 }
                 else
                 {
-                    missCount++;
-                    hitCount++;
+                    missCount++;// update miss count
+                    hitCount++;// update hit count as well because, new page is first updated in lru cache and we get reference from cache
                     int pageEvictedFromProcessId = -1;
                     int evictedVirtualPageId = -1;
+                    // if there are no free pages to allocate for this process, evict a page using lru cache decision
                     if(remainingFreePages == 0)
                     {
+                        // removing lru page from memory, update memMap
                         removeFrameFromProcess(lruCache.back());
                         memMap[ lruCache.back()->frameId ] = -1;
                         lruCache.pop_back();
@@ -347,19 +369,24 @@ void lru(int pageRefCount)
                         evictedVirtualPageId = lruCache.back()->processPageId;
                     }
 
+                    // by this time there should be atleast 1 free page available, allocate that to this process
                     remainingFreePages--;
 
                     cout << "Allocated new frame id: " << freePageHead->frameId << " to process id: " << curProcess->processId << endl; 
 
+                    // using first page from the free page list
                     pageNode* temp = freePageHead;
                     freePageHead = freePageHead->next;
 
+                    // updating members of the first free page node to track for this current process
                     temp->processPageId = randomPage;
                     temp->usingProcessId = curProcess->processId;
 
+                    //updating page list of process by adding free node to top of that list, now process head points to the current free page node allocated
                     temp->next = curProcess->pageHead;
                     curProcess->pageHead = temp;
 
+                    //updating lru cache and memMap
                     lruCache.insert(lruCache.begin(), temp);
                     memMap[ lruCache[0]->frameId ] = curProcess->processId;
 
@@ -373,29 +400,35 @@ void lru(int pageRefCount)
                     else
                         cout << ", No Page Evicted >" << endl; 
                 }
+                // decrement service time by 0.1 because, we assumed each iteration as 100msec and service time is in integer seconds.
                 curProcess->serviceTime -= 0.1;
                 if(curProcess->serviceTime <= 0)
                 {
+                    // if a process has finished it's execution, mark it as finished
                     curProcess->finished = true;
 
                     cout << "timestamp: " << timeStamp/10 << "." << timeStamp%10;
                     cout << " Process ID: " << curProcess->processId << " has finished " << endl;
 
+                    // free all the memory frames holding by this completed process
                     removeFramesPostProcess(curProcess);
                     printMemMap();
                 }
             }
         }
     }
+    // update avg hit/miss ratio
     avgHitByMissRatio += (hitCount*1.0) / ((missCount + hitCount) * 1.0) ;
 }
 
 int main()
 {
+    // making all cout to text file
     std::ofstream out("LRU_latest_output.txt");
     std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
     std::cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
 
+    // runs for five time and collect statistics
     for(int j=0; j<5; j++)
     {
         cout << endl << "******************* starting new run : " << j+1 << " *******************" << endl << endl;
@@ -417,6 +450,7 @@ int main()
     for(int i=0; i<memMap.size(); i++)
         memMap[i] = -1;
     lruCache.clear();
+    // running lru for only 100 page references
     lru(100);
 
     return 0;
