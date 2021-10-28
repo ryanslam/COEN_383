@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <unistd.h>
 #include <pthread.h>
@@ -22,15 +23,21 @@ struct pageNode {
 
 struct processNode {
     int memorySize;
-    int serviceTime;
+    double serviceTime; 
     int processId;
     int arrivalTime;
     int startTime;
+    bool started;
+    bool finished;
+    int prevPageReferenced;
     processNode* next;
     pageNode* pageHead;
 
     processNode() : arrivalTime((rand() % 60)),
                     startTime(-1),
+                    started(false),
+                    finished(false),
+                    prevPageReferenced(-1),
                     next(NULL),
                     pageHead(NULL){}
 };
@@ -39,35 +46,10 @@ struct processNode {
 pageNode* freePageHead;
 int remainingFreePages = 100;
 processNode* processHead;
-int timeStamp = 0;
-pthread_mutex_t timerMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t freePageHeadMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t processHeadMutex= PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t lruMutex= PTHREAD_MUTEX_INITIALIZER;
-vector<pageNode*> globalLruCache;
-
-void* runTimer(void* sec)
-{
-    int *psec = (int*)(sec);
-    int seconds = *psec;
-    for(int i=0; i<seconds; i++)
-    {
-        usleep(1000000); //sleep for a sec and update timer
-        pthread_mutex_lock(&timerMutex);
-        timeStamp++;
-        pthread_mutex_unlock(&timerMutex);
-    }
-    return NULL;
-}
-
-int getTimeStamp()
-{
-    int ts;
-    pthread_mutex_lock(&timerMutex);
-    ts = timeStamp;
-    pthread_mutex_unlock(&timerMutex);
-    return ts;
-}
+vector<pageNode*> lruCache;
+vector<int> memMap(100, -1);
+double avgHitByMissRatio = 0.0;
+int processessSwappedIn = 0;
 
 processNode* mergeSort(processNode* head)
 {
@@ -174,7 +156,6 @@ bool removeFrameFromProcess(pageNode* page)
         process = process->next;
     if(process != NULL)
     {
-        pthread_mutex_lock(&processHeadMutex);
         //remove the appropriate page by iterate over page list
         pageNode* curPage = process->pageHead;
         pageNode* temp = NULL; // to maintain previous process pointing to current process while iterating over process linked list
@@ -195,10 +176,8 @@ bool removeFrameFromProcess(pageNode* page)
 
             remainingFreePages++;
 
-            pthread_mutex_unlock(&processHeadMutex);
             return true;
         }
-        pthread_mutex_unlock(&processHeadMutex);
         return false;
     }
     return false;
@@ -210,26 +189,24 @@ void removeFramesPostProcess(processNode* process)
     {
         pageNode* temp = process->pageHead;
         process->pageHead = process->pageHead->next;
-        
-        pthread_mutex_lock(&freePageHeadMutex);
+
         temp->next = freePageHead;
         freePageHead = temp;
 
         remainingFreePages++;
 
-        pthread_mutex_lock(&lruMutex);
-        for(int lru_index = 0; lru_index < globalLruCache.size(); lru_index++)
+        for(int lru_index = 0; lru_index < lruCache.size(); lru_index++)
         {
-            if(globalLruCache[lru_index] == temp)
+            if(lruCache[lru_index] == temp)
             {
-                globalLruCache.erase(globalLruCache.begin() + lru_index);
+                lruCache.erase(lruCache.begin() + lru_index);
+                memMap[ temp->frameId ] = -1;
+                cout << "freeing frame id : " << temp->frameId << " as process : " << temp->usingProcessId << " has finished" << endl;
                 break;
             }
         }
-        pthread_mutex_unlock(&lruMutex);
-
-        pthread_mutex_unlock(&freePageHeadMutex);
     }
+    cout << "Remaining free pages : " << remainingFreePages << endl;
 }
 
 int getRandomPage(int prevPage, int memorySize)
@@ -238,152 +215,209 @@ int getRandomPage(int prevPage, int memorySize)
     int randomPage;
     int randNum = rand()%10;
     if(randNum < 7)
+    {
         randomPage = prevPage + (rand()%3) - 1;
+        if(randomPage < 0)
+            randomPage = memorySize - 1;
+        else if(randomPage == memorySize)
+            randomPage = 0;
+    }
     else
     {
-        int binRand = rand()%2;
-        if(binRand == 0)
+        if( prevPage-1 <=0)
+            randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+        else if((memorySize-prevPage-2) <= 0)
             randomPage = rand()%(prevPage-1);
         else
-            randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+        {
+            int binRand = rand()%2;
+            if(binRand == 0 )
+                randomPage = rand()%(prevPage-1);
+            else
+                randomPage = (rand()% (memorySize-prevPage-2) )+ prevPage+2;
+        }
     }
-    if(0 <= randomPage && randomPage<memorySize)
-        return randomPage;
-    return getRandomPage(prevPage, memorySize);
+    return randomPage;
 }
 
-void* lru(void* curProcess)
+void printMemMap()
 {
-    processNode* process = (processNode*)curProcess;
-    int currentTime = getTimeStamp();
-    process->startTime = currentTime;
-
-    int prevPage = 0;
-    while((currentTime-process->startTime) < process->serviceTime)
+    for( int i = 0; i < memMap.size() ; i++ )
     {
-        //sleep for 100mSec
-        usleep(100000);
-        int randomPage = getRandomPage(prevPage, process->memorySize);
-        //grab lock
-        pthread_mutex_lock(&lruMutex);
-        int pageIndex = isPageInMemory(globalLruCache, randomPage, process->processId);
-        if( pageIndex != -1)
-        {
-            // update cache
-            pageNode *temp = globalLruCache[pageIndex];
-            globalLruCache.erase(globalLruCache.begin() + pageIndex);
-            globalLruCache.insert(globalLruCache.begin(), temp); 
-            pthread_mutex_unlock(&lruMutex); 
-            //update cache hit ----
-
-        }
+        if ( i % 10 == 0 && i != 0 )
+            cout << endl;
+        if ( memMap[ i ] == - 1 )
+            cout << "|...|";
+        else if (memMap[ i ] < 10)
+            cout << "|00" << memMap[ i ] <<  "|";
+        else if(memMap[ i ] < 100)
+            cout << "|0" << memMap[ i ] <<  "|";
         else
-        {
-            pthread_mutex_unlock(&lruMutex); 
-
-            pthread_mutex_lock(&freePageHeadMutex);
-
-            if(remainingFreePages == 0)
-            {
-                // evict least recently used page from cache
-                pthread_mutex_lock(&lruMutex);
-                pageNode* temp = globalLruCache.back();
-                globalLruCache.pop_back();
-                pthread_mutex_unlock(&lruMutex);
-
-                // process pageHead per process which maintains list of pages currently used by that process
-                if(!removeFrameFromProcess(temp))
-                    cout << "potential bug in the code, trying to remove frame not used by the current process" << endl;
-                                                         
-                // update cache miss
-
-            }
-            //allocate page, update lru cache, freePagesHead, process pageHead,remainingFreePages
-            remainingFreePages--;
-
-            freePageHead->processPageId = randomPage;
-            freePageHead->usingProcessId = process->processId;            
-            
-            pageNode* temp = freePageHead;
-            freePageHead = freePageHead->next;
-
-            pthread_mutex_unlock(&freePageHeadMutex);
-
-            pthread_mutex_lock(&lruMutex);
-            globalLruCache.insert(globalLruCache.begin(), temp);
-            pthread_mutex_unlock(&lruMutex);
-
-            pthread_mutex_lock(&processHeadMutex);
-            temp->next = process->pageHead;
-            process->pageHead = temp;
-            pthread_mutex_unlock(&processHeadMutex);
-
-            //update cache hit
-
-        }
-
-        //update currentTime
-        currentTime = getTimeStamp();
+            cout << "|" << memMap[ i ] <<  "|";
+        
     }
-    //free in-memory frames used by this process
-    removeFramesPostProcess(process);
-    return NULL;
+    cout << endl;
 }
 
-int main()
+void lru(int pageRefCount)
 {
-    processHead = generateJobsAndSort( 150 );
-    freePageHead = generateFreePageList( 100 );
+    int hitCount = 0;
+    int missCount = 0;
 
-    pthread_t tids[150];
-    //if a process has arrived on or before timestamp, create and run thread
-    processNode* curProcess = processHead;
-
-    pthread_t timer;
-    int sec = 120;
-    pthread_create(&timer, NULL, runTimer, (void*)&sec);
-
-    int curTime = getTimeStamp();
-    int threadIdIndex = 0, i = 0;
-    while(curTime<60 && curProcess)
+    for(int timeStamp = 0; timeStamp < 600; timeStamp++)
     {
-        while(curProcess && curProcess->arrivalTime <= curTime && curTime<60)
+        for(processNode *curProcess = processHead; curProcess != NULL; curProcess = curProcess->next)
         {
-            if(remainingFreePages>=4)
-            {              
-                //initial reference : page-0
-                pthread_mutex_lock(&freePageHeadMutex);
+            if(pageRefCount == 0)
+                return;
+
+            if(!curProcess->started && curProcess->arrivalTime <= timeStamp/10 && remainingFreePages >= 4)
+            {
+                // initial page reference : page-0
+                curProcess->started = true;
+
+                cout << "timestamp: " << timeStamp/10 << "." << timeStamp%10;
+                cout << " Process ID: " << curProcess->processId << " Entered ";              
+                cout << " Size: " << curProcess->memorySize;
+                cout << " Service Time: " << curProcess->serviceTime << endl;
 
                 remainingFreePages--;
 
-                freePageHead->processPageId = 0;
-                freePageHead->usingProcessId = curProcess->processId;
+                cout << "Allocated new frame id: " << freePageHead->frameId << " to process id: " << curProcess->processId << endl; 
 
                 pageNode* temp = freePageHead;
                 freePageHead = freePageHead->next;
 
-                pthread_mutex_unlock(&freePageHeadMutex);
+                temp->processPageId = 0;
+                temp->usingProcessId = curProcess->processId;
 
-                pthread_mutex_lock(&lruMutex);
-                globalLruCache.insert(globalLruCache.begin(), temp);
-                pthread_mutex_unlock(&lruMutex);
-
-                pthread_mutex_lock(&processHeadMutex);
                 temp->next = curProcess->pageHead;
                 curProcess->pageHead = temp;
-                pthread_mutex_unlock(&processHeadMutex);
-                
-                pthread_create(&tids[i++], NULL, lru, (void*)curProcess);
-                curProcess = curProcess->next;
-                threadIdIndex++;
-            }
-            curTime = getTimeStamp();
-        }
-        curTime = getTimeStamp();
-    }
 
-    for(int i=0; i<threadIdIndex; i++)
-        pthread_join( tids[i], NULL );
+                lruCache.insert(lruCache.begin(), temp);
+                memMap[ lruCache[0]->frameId ] = curProcess->processId;
+
+                cout << "< timestamp: " << timeStamp/10 << "." << timeStamp%10;
+                cout << ", Process ID: " << curProcess->processId;
+                cout << ", virtual page referenced: " << 0;
+                cout << ", Frame Id in Memory:  " << temp->frameId;
+                cout << ", No Page Evicted " << endl; 
+
+                processessSwappedIn++;
+                printMemMap();
+                continue;
+            }
+
+            if(curProcess->started && !curProcess->finished)
+            {
+                // make a page reference
+                int randomPage = getRandomPage(curProcess->prevPageReferenced, curProcess->memorySize);
+                pageRefCount--;
+
+                int pageIndexIncache = isPageInMemory(lruCache, randomPage, curProcess->processId);
+                if(pageIndexIncache != -1)
+                {
+                    // referenced page is in memory
+                    pageNode* temp = lruCache[pageIndexIncache];
+                    lruCache.erase(lruCache.begin() + pageIndexIncache);
+                    lruCache.insert(lruCache.begin(), temp);
+
+                    cout << "< timestamp: " << timeStamp/10 << "." << timeStamp%10;
+                    cout << ", Process ID: " << curProcess->processId;
+                    cout << ", virtual page referenced: " << randomPage;
+                    cout << ", Frame Id in Memory:  " << temp->frameId;
+                    cout << ", No Page Evicted " << endl; 
+
+                    hitCount++;
+                }
+                else
+                {
+                    missCount++;
+                    hitCount++;
+                    int pageEvictedFromProcessId = -1;
+                    int evictedVirtualPageId = -1;
+                    if(remainingFreePages == 0)
+                    {
+                        removeFrameFromProcess(lruCache.back());
+                        memMap[ lruCache.back()->frameId ] = -1;
+                        lruCache.pop_back();
+
+                        cout << "MEMORY FULL!!" << "\tEVICTED " << lruCache.back()->usingProcessId << "'s virtual page " << lruCache.back()->processPageId << endl;
+                        pageEvictedFromProcessId = lruCache.back()->usingProcessId;
+                        evictedVirtualPageId = lruCache.back()->processPageId;
+                    }
+
+                    remainingFreePages--;
+
+                    cout << "Allocated new frame id: " << freePageHead->frameId << " to process id: " << curProcess->processId << endl; 
+
+                    pageNode* temp = freePageHead;
+                    freePageHead = freePageHead->next;
+
+                    temp->processPageId = randomPage;
+                    temp->usingProcessId = curProcess->processId;
+
+                    temp->next = curProcess->pageHead;
+                    curProcess->pageHead = temp;
+
+                    lruCache.insert(lruCache.begin(), temp);
+                    memMap[ lruCache[0]->frameId ] = curProcess->processId;
+
+                    cout << "< timestamp: " << timeStamp/10 << "." << timeStamp%10;
+                    cout << ", Process ID: " << curProcess->processId;
+                    cout << ", virtual page referenced: " << randomPage;
+                    cout << ", Frame Id in Memory:  " << temp->frameId;
+
+                    if(pageEvictedFromProcessId != -1 && evictedVirtualPageId != -1)
+                        cout << ", EVICTED process" << pageEvictedFromProcessId << "'s virtual page " << evictedVirtualPageId << " >" << endl;
+                    else
+                        cout << ", No Page Evicted >" << endl; 
+                }
+                curProcess->serviceTime -= 0.1;
+                if(curProcess->serviceTime <= 0)
+                {
+                    curProcess->finished = true;
+
+                    cout << "timestamp: " << timeStamp/10 << "." << timeStamp%10;
+                    cout << " Process ID: " << curProcess->processId << " has finished " << endl;
+
+                    removeFramesPostProcess(curProcess);
+                    printMemMap();
+                }
+            }
+        }
+    }
+    avgHitByMissRatio += (hitCount*1.0) / ((missCount + hitCount) * 1.0) ;
+}
+
+int main()
+{
+    std::ofstream out("LRU_latest_output.txt");
+    std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
+    std::cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
+
+    for(int j=0; j<5; j++)
+    {
+        cout << endl << "******************* starting new run : " << j+1 << " *******************" << endl << endl;
+        processHead = generateJobsAndSort( 150 );
+        freePageHead = generateFreePageList( 100 );
+        for(int i=0; i<memMap.size(); i++)
+            memMap[i] = -1;
+        lruCache.clear();
+        lru(-1);
+    }
+    avgHitByMissRatio = avgHitByMissRatio/5.0;
+    cout << "Average Hit/Miss ratio : " << avgHitByMissRatio << " (" << (avgHitByMissRatio*100.0) << "%)" << endl;
+    cout << "Average Number of processess successfully swapped in : " << processessSwappedIn/5.0 << endl;
+
+    cout << endl << "************************ running simulation for 100 page references ************************" << endl << endl;
+
+    processHead = generateJobsAndSort( 150 );
+    freePageHead = generateFreePageList( 100 );
+    for(int i=0; i<memMap.size(); i++)
+        memMap[i] = -1;
+    lruCache.clear();
+    lru(100);
 
     return 0;
 }
