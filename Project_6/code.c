@@ -149,7 +149,7 @@ int main()
 
         cur_fds = base_fds;
         struct timeval timeout;
-        // 2 sec
+        // 2.5 sec
         timeout.tv_sec = 2;
         timeout.tv_usec = (500000);
         int rv = select(FD_SETSIZE,&cur_fds,0,0,&timeout);
