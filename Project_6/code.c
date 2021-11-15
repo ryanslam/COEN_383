@@ -8,6 +8,7 @@
 #include <sys/ioctl.h> 
 #include <string.h>
 #include <time.h>
+#include <stdbool.h>
  
 #define BUFFER_SIZE 100000
 #define READ_END     0 
@@ -171,6 +172,10 @@ int main()
                 }
             }
         }
+    }
+    free(pid);
+    for(int i = 0; i < 5; i++) {
+	    free(fd[i]);
     }
     return 0;
 }
