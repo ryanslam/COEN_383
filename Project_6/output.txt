@@ -1,178 +1,210 @@
-0:0:0.769 : 0:0:0.765 :Child 1 message 1
+0:0:0.268 : 0:0:0.265 :Child 1 message 1
 
-0:0:0.769 : 0:0:0.765 :Child 2 message 1
+0:0:0.268 : 0:0:0.265 :Child 2 message 1
 
-0:0:0.769 : 0:0:0.765 :Child 3 message 1
+0:0:0.268 : 0:0:0.265 :Child 3 message 1
 
-0:0:0.769 : 0:0:0.766 :Child 4 message 1
+0:0:0.268 : 0:0:0.265 :Child 4 message 1
 
-0:0:1.765 : 0:0:1.765 :Child 1 message 2
+0:0:1.265 : 0:0:1.265 :Child 2 message 2
 
-0:0:1.765 : 0:0:1.765 :Child 2 message 2
+0:0:1.265 : 0:0:1.265 :Child 1 message 2
 
-0:0:1.765 : 0:0:1.765 :Child 3 message 2
+0:0:1.265 : 0:0:1.265 :Child 3 message 2
 
-0:0:1.766 : 0:0:1.766 :Child 4 message 2
+0:0:1.265 : 0:0:1.265 :Child 4 message 2
 
-0:0:2.765 : 0:0:2.765 :Child 1 message 3
+0:0:2.265 : 0:0:2.265 :Child 1 message 3
 
-0:0:2.765 : 0:0:2.765 :Child 2 message 3
+0:0:2.265 : 0:0:2.265 :Child 2 message 3
 
-0:0:2.765 : 0:0:2.765 :Child 3 message 3
+0:0:2.265 : 0:0:2.265 :Child 3 message 3
 
-0:0:2.766 : 0:0:2.766 :Child 4 message 3
+0:0:2.266 : 0:0:2.265 :Child 4 message 3
 
-0:0:3.765 : 0:0:3.765 :Child 1 message 5
+0:0:2.986 : 0:0:2.986 :Child 5 message: hello
 
-0:0:3.765 : 0:0:3.765 :Child 2 message 5
 
-0:0:3.765 : 0:0:3.765 :Child 3 message 5
+0:0:3.265 : 0:0:3.265 :Child 1 message 5
 
-0:0:3.766 : 0:0:3.766 :Child 4 message 5
+0:0:3.265 : 0:0:3.265 :Child 2 message 5
 
-0:0:5.765 : 0:0:5.765 :Child 1 message 6
+0:0:3.265 : 0:0:3.265 :Child 3 message 5
 
-0:0:5.765 : 0:0:5.765 :Child 2 message 6
+0:0:3.266 : 0:0:3.266 :Child 4 message 5
 
-0:0:5.766 : 0:0:5.766 :Child 3 message 6
+0:0:4.963 : 0:0:4.963 :Child 5 message: bhanu
 
-0:0:5.766 : 0:0:5.766 :Child 4 message 6
 
-0:0:6.765 : 0:0:6.765 :Child 1 message 7
+0:0:5.265 : 0:0:5.265 :Child 1 message 6
 
-0:0:6.765 : 0:0:6.765 :Child 2 message 7
+0:0:5.265 : 0:0:5.265 :Child 2 message 6
 
-0:0:6.766 : 0:0:6.766 :Child 3 message 7
+0:0:5.265 : 0:0:5.265 :Child 3 message 6
 
-0:0:6.766 : 0:0:6.766 :Child 4 message 7
+0:0:5.266 : 0:0:5.266 :Child 4 message 6
 
-0:0:7.765 : 0:0:7.765 :Child 1 message 8
+0:0:6.265 : 0:0:6.265 :Child 1 message 7
 
-0:0:7.765 : 0:0:7.765 :Child 2 message 8
+0:0:6.265 : 0:0:6.265 :Child 2 message 7
 
-0:0:7.766 : 0:0:7.766 :Child 3 message 8
+0:0:6.266 : 0:0:6.266 :Child 3 message 7
 
-0:0:7.766 : 0:0:7.766 :Child 4 message 8
+0:0:6.266 : 0:0:6.266 :Child 4 message 7
 
-0:0:8.765 : 0:0:8.765 :Child 1 message 11
+0:0:6.361 : 0:0:6.361 :Child 5 message: how
 
-0:0:8.766 : 0:0:8.766 :Child 2 message 11
 
-0:0:8.766 : 0:0:8.766 :Child 3 message 11
+0:0:7.265 : 0:0:7.265 :Child 1 message 8
 
-0:0:8.766 : 0:0:8.766 :Child 4 message 11
+0:0:7.265 : 0:0:7.265 :Child 2 message 8
 
-0:0:10.766 : 0:0:10.765 :Child 1 message 12
+0:0:7.266 : 0:0:7.266 :Child 4 message 8
 
-0:0:10.766 : 0:0:10.766 :Child 2 message 12
+0:0:7.266 : 0:0:7.266 :Child 3 message 8
 
-0:0:10.766 : 0:0:10.766 :Child 3 message 12
+0:0:8.265 : 0:0:8.265 :Child 1 message 11
 
-0:0:10.766 : 0:0:10.766 :Child 4 message 12
+0:0:8.265 : 0:0:8.265 :Child 2 message 11
 
-0:0:11.766 : 0:0:11.766 :Child 1 message 13
+0:0:8.266 : 0:0:8.266 :Child 4 message 11
 
-0:0:11.766 : 0:0:11.766 :Child 2 message 13
+0:0:8.266 : 0:0:8.266 :Child 3 message 11
 
-0:0:11.766 : 0:0:11.766 :Child 3 message 13
+0:0:9.583 : 0:0:9.583 :Child 5 message: are you
 
-0:0:11.766 : 0:0:11.766 :Child 4 message 13
 
-0:0:13.766 : 0:0:13.766 :Child 1 message 14
+0:0:10.265 : 0:0:10.265 :Child 1 message 12
 
-0:0:13.766 : 0:0:13.766 :Child 2 message 14
+0:0:10.265 : 0:0:10.265 :Child 2 message 12
 
-0:0:13.766 : 0:0:13.766 :Child 3 message 14
+0:0:10.266 : 0:0:10.266 :Child 4 message 12
 
-0:0:13.766 : 0:0:13.766 :Child 4 message 14
+0:0:10.266 : 0:0:10.266 :Child 3 message 12
 
-0:0:14.766 : 0:0:14.766 :Child 1 message 15
+0:0:11.265 : 0:0:11.265 :Child 1 message 13
 
-0:0:14.766 : 0:0:14.766 :Child 2 message 15
+0:0:11.266 : 0:0:11.266 :Child 2 message 13
 
-0:0:14.766 : 0:0:14.766 :Child 3 message 15
+0:0:11.266 : 0:0:11.266 :Child 4 message 13
 
-0:0:14.767 : 0:0:14.767 :Child 4 message 15
+0:0:11.266 : 0:0:11.266 :Child 3 message 13
 
-0:0:16.766 : 0:0:16.766 :Child 1 message 16
+0:0:13.266 : 0:0:13.266 :Child 1 message 14
 
-0:0:16.766 : 0:0:16.766 :Child 2 message 16
+0:0:13.266 : 0:0:13.266 :Child 2 message 14
 
-0:0:16.766 : 0:0:16.766 :Child 3 message 16
+0:0:13.266 : 0:0:13.266 :Child 4 message 14
 
-0:0:16.767 : 0:0:16.767 :Child 4 message 16
+0:0:13.267 : 0:0:13.266 :Child 3 message 14
 
-0:0:17.766 : 0:0:17.766 :Child 1 message 17
+0:0:14.192 : 0:0:14.192 :Child 5 message: gudda
 
-0:0:17.766 : 0:0:17.766 :Child 2 message 17
 
-0:0:17.766 : 0:0:17.766 :Child 3 message 17
+0:0:14.266 : 0:0:14.266 :Child 1 message 15
 
-0:0:17.767 : 0:0:17.767 :Child 4 message 17
+0:0:14.266 : 0:0:14.266 :Child 2 message 15
 
-0:0:18.766 : 0:0:18.766 :Child 1 message 20
+0:0:14.266 : 0:0:14.266 :Child 4 message 15
 
-0:0:18.766 : 0:0:18.766 :Child 2 message 20
+0:0:14.267 : 0:0:14.267 :Child 3 message 15
 
-0:0:18.766 : 0:0:18.766 :Child 3 message 20
+0:0:16.266 : 0:0:16.266 :Child 1 message 16
 
-0:0:18.767 : 0:0:18.767 :Child 4 message 20
+0:0:16.266 : 0:0:16.266 :Child 2 message 16
 
-0:0:19.766 : 0:0:19.766 :Child 1 message 21
+0:0:16.266 : 0:0:16.266 :Child 4 message 16
 
-0:0:19.766 : 0:0:19.766 :Child 2 message 21
+0:0:16.267 : 0:0:16.267 :Child 3 message 16
 
-0:0:19.766 : 0:0:19.766 :Child 3 message 21
+0:0:17.266 : 0:0:17.266 :Child 1 message 17
 
-0:0:19.767 : 0:0:19.767 :Child 4 message 21
+0:0:17.266 : 0:0:17.266 :Child 2 message 17
 
-0:0:21.766 : 0:0:21.766 :Child 1 message 22
+0:0:17.266 : 0:0:17.266 :Child 4 message 17
 
-0:0:21.766 : 0:0:21.766 :Child 2 message 22
+0:0:17.267 : 0:0:17.267 :Child 3 message 17
 
-0:0:21.767 : 0:0:21.767 :Child 3 message 22
+0:0:17.560 : 0:0:17.560 :Child 5 message: palguthadi
 
-0:0:21.767 : 0:0:21.767 :Child 4 message 22
 
-0:0:23.766 : 0:0:23.766 :Child 1 message 23
+0:0:18.266 : 0:0:18.266 :Child 1 message 20
 
-0:0:23.766 : 0:0:23.766 :Child 2 message 23
+0:0:18.266 : 0:0:18.266 :Child 2 message 20
 
-0:0:23.767 : 0:0:23.767 :Child 3 message 23
+0:0:18.266 : 0:0:18.266 :Child 4 message 20
 
-0:0:23.767 : 0:0:23.767 :Child 4 message 23
+0:0:18.267 : 0:0:18.267 :Child 3 message 20
 
-0:0:25.766 : 0:0:25.766 :Child 1 message 26
+0:0:18.727 : 0:0:18.727 :Child 5 message: mama
 
-0:0:25.766 : 0:0:25.766 :Child 2 message 26
 
-0:0:25.767 : 0:0:25.767 :Child 3 message 26
+0:0:19.266 : 0:0:19.266 :Child 1 message 21
 
-0:0:25.767 : 0:0:25.767 :Child 4 message 26
+0:0:19.266 : 0:0:19.266 :Child 2 message 21
 
-0:0:27.766 : 0:0:27.766 :Child 1 message 27
+0:0:19.267 : 0:0:19.267 :Child 4 message 21
 
-0:0:27.767 : 0:0:27.767 :Child 2 message 27
+0:0:19.267 : 0:0:19.267 :Child 3 message 21
 
-0:0:27.767 : 0:0:27.767 :Child 3 message 27
+0:0:20.242 : 0:0:20.242 :Child 5 message: macha
 
-0:0:27.767 : 0:0:27.767 :Child 4 message 27
 
-0:0:29.767 : 0:0:29.767 :Child 1 message 28
+0:0:21.266 : 0:0:21.266 :Child 1 message 22
 
-0:0:29.767 : 0:0:29.767 :Child 2 message 28
+0:0:21.266 : 0:0:21.266 :Child 2 message 22
 
-0:0:29.767 : 0:0:29.767 :Child 3 message 28
+0:0:21.267 : 0:0:21.267 :Child 4 message 22
 
-0:0:29.767 : 0:0:29.767 :Child 4 message 28
+0:0:21.267 : 0:0:21.267 :Child 3 message 22
 
-0:0:30.767 : 0:0:30.767 :Child 1 message 29
+0:0:22.147 : 0:0:22.147 :Child 5 message: dengey
 
-0:0:30.767 : 0:0:30.767 :Child 2 message 29
 
-0:0:30.767 : 0:0:30.767 :Child 3 message 29
+0:0:23.266 : 0:0:23.266 :Child 1 message 23
 
-0:0:30.767 : 0:0:30.767 :Child 4 message 29
+0:0:23.266 : 0:0:23.266 :Child 2 message 23
 
-0:0:31.767 : 0:0:31.767 :Child 1 message 30
+0:0:23.267 : 0:0:23.267 :Child 4 message 23
+
+0:0:23.267 : 0:0:23.267 :Child 3 message 23
+
+0:0:23.663 : 0:0:23.662 :Child 5 message: lanja
+
+
+0:0:25.266 : 0:0:25.266 :Child 1 message 26
+
+0:0:25.266 : 0:0:25.266 :Child 2 message 26
+
+0:0:25.267 : 0:0:25.267 :Child 4 message 26
+
+0:0:25.267 : 0:0:25.267 :Child 3 message 26
+
+0:0:27.266 : 0:0:27.266 :Child 1 message 27
+
+0:0:27.266 : 0:0:27.266 :Child 2 message 27
+
+0:0:27.267 : 0:0:27.267 :Child 4 message 27
+
+0:0:27.267 : 0:0:27.267 :Child 3 message 27
+
+0:0:29.266 : 0:0:29.266 :Child 1 message 28
+
+0:0:29.266 : 0:0:29.266 :Child 2 message 28
+
+0:0:29.267 : 0:0:29.267 :Child 4 message 28
+
+0:0:29.267 : 0:0:29.267 :Child 3 message 28
+
+0:0:30.266 : 0:0:30.266 :Child 1 message 29
+
+0:0:30.266 : 0:0:30.266 :Child 2 message 29
+
+0:0:30.267 : 0:0:30.267 :Child 4 message 29
+
+0:0:30.267 : 0:0:30.267 :Child 3 message 29
+
+0:0:31.267 : 0:0:31.267 :Child 1 message 30
+
+0:0:31.267 : 0:0:31.267 :Child 2 message 30
 

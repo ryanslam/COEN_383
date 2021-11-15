@@ -83,7 +83,6 @@ int main()
                 char user_input[100] = {0};
                 while(true)
                 {   
-                    /*
                     int nread;
                     ioctl(0,FIONREAD,&nread);
                     if (nread != 0)
@@ -91,15 +90,7 @@ int main()
                         nread = read(0,user_input,nread); 
                         user_input[nread] = '\0'; 
                     }
-                    */
-                    //printf("(Child 5)Enter Message :");
-                    char ch;
-                    int j=0;
-                    do{
-                    ch = getchar();
-                    user_input[j++] = ch;
-                    }while(ch != '\n');
-                    fflush(stdin);
+                    fgets(user_input, 100, stdin);
                     char *time_stamp = getTimeStamp();
                     sprintf(write_msg, "%s :Child %d message: %s\n", time_stamp, i+1, user_input);
                     free(time_stamp);
