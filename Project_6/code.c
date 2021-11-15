@@ -167,7 +167,7 @@ int main()
                     }
                     // get and append time stamp before writing into output file
                     char *time_stamp = getTimeStamp();
-                    fprintf(output_file_fd, "%s : %s\n", time_stamp, read_msg);
+                    fprintf(output_file_fd, "%s\n", read_msg);
                     free(time_stamp);
                 }
             }
